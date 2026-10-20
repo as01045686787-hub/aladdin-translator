@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a0b10">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- 파일 없이 HTML만 열어도 아이콘이 보이도록 내장한 예비 아이콘 -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,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">
+    <title>알라딘 통역</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <style>
+        :root {
+            /* -- base surfaces (deep ink, faint navy undertone) -- */
+            --bg-color: #0a0b10;
+            --card-bg: #14161d;
+            --surface-2: #1b1e28;
+            --table-border: rgba(255,255,255,0.055);
+            --hairline: rgba(201,162,74,0.16);
+            --hairline-soft: rgba(255,255,255,0.06);
+
+            /* -- ink (warm parchment, not stark white) -- */
+            --text-color: #ece5d6;
+            --text-dim: #8d8c92;
+            --text-faint: #5a5a63;
+
+            /* -- accents -- */
+            --accent-color: #c9a227;       /* antique brass — primary */
+            --accent-bright: #e7c766;
+            --accent-deep: #8a6a1c;
+            --sapphire: #4a7796;           /* secondary — tour / info */
+            --sapphire-bright: #6fa0c2;
+            --emerald: #4b8467;            /* add */
+            --ruby: #a24444;               /* delete */
+            --slate: #5f6675;              /* neutral / edit */
+
+            --major-grad: linear-gradient(150deg, #1c2230, #12151d);
+            --premium-shadow: 0 14px 34px -16px rgba(0,0,0,0.65);
+            --border-radius-lg: 16px;
+            --border-radius-sm: 9px;
+            --radius-xl: 20px;
+        }
+        * { box-sizing: border-box; }
+        body {
+            background:
+                radial-gradient(circle at 50% -8%, rgba(201,162,74,0.06), transparent 55%),
+                var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Pretendard', -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            -webkit-user-select: none;
+            overflow-x: hidden;
+            letter-spacing: -0.2px;
+        }
+        header {
+            padding: 10px 20px;
+            height: 70px;
+            text-align: center;
+            border-bottom: 1px solid var(--hairline);
+            font-size: 24px;
+            font-weight: 800;
+            position: sticky;
+            top:0;
+            background: rgba(10, 11, 16, 0.92);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        #header-title {
+            position: absolute; left: 112px; right: 60px; top: 50%; transform: translateY(-50%);
+            text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+            font-family: 'Noto Serif KR', serif;
+            font-weight: 700;
+            font-size: 21px;
+            letter-spacing: 0.2px;
+            background: linear-gradient(135deg, var(--accent-bright), var(--accent-color) 55%, var(--accent-deep));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .menu-btn { position: absolute; right: 20px; display: flex; flex-direction: column; gap: 6px; cursor: pointer; z-index: 1001; padding: 5px; }
+        .menu-btn div { width: 24px; height: 2px; background: var(--text-color); border-radius: 2px; opacity: 0.85; }
+        #tour-btn {
+            position: absolute;
+            right: 8px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(150deg, #4a7796, #2f5670);
+            color: #eef4f8;
+            font-size: 14px;
+            font-weight: 700;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 101;
+            box-shadow: 0 10px 22px -8px rgba(74, 119, 150, 0.55), inset 0 1px 0 rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.08);
+            cursor: pointer;
+        }
+        #search-trigger {
+            position: absolute;
+            right: 58px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--surface-2);
+            color: var(--text-color);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 101;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 700;
+            border: 1px solid var(--hairline-soft);
+            box-shadow: var(--premium-shadow);
+        }
+        #search-input-container {
+            position: absolute;
+            right: 58px;
+            top: 13px;
+            display: none;
+            align-items: center;
+            background: var(--surface-2);
+            border-radius: 25px;
+            padding: 5px 18px;
+            border: 1px solid var(--hairline);
+            z-index: 102;
+            width: 200px;
+            height: 44px;
+            box-sizing: border-box;
+            box-shadow: var(--premium-shadow);
+        }
+        #search-input-container input { background: transparent; border: none; color: var(--text-color); outline: none; width: 100%; font-size: 16px; font-weight: 600; }
+        #side-menu { position: fixed; top: 0; left: -280px; width: 280px; height: 100%; background: #0d0f15; z-index: 2000; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 20px 0 50px rgba(0,0,0,0.6); padding: 30px 24px; box-sizing: border-box; overflow-y: auto; border-right: 1px solid var(--hairline); }
+        #side-menu.active { transform: translateX(280px); }
+        .menu-item { padding: 20px 12px; border-bottom: 1px solid var(--table-border); font-size: 17px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 12px; color: #c7c8cf; transition: color 0.2s; }
+        .menu-item:active { color: var(--accent-bright); }
+        .container { padding: 16px; padding-bottom: 120px; box-sizing: border-box; width: 100%; }
+        .country-search-bar {
+            width: 100%;
+            padding: 16px 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--hairline-soft);
+            border-radius: var(--radius-xl);
+            color: var(--text-color);
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            outline: none;
+            box-sizing: border-box;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.4);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .country-search-bar::placeholder { color: var(--text-faint); }
+        .country-search-bar:focus { border-color: var(--accent-color); box-shadow: inset 0 2px 10px rgba(0,0,0,0.4), 0 0 0 3px rgba(201, 162, 39, 0.16); }
+
+        .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: 100%; box-sizing: border-box; }
+        #country-view { padding-left: 12px; padding-right: 12px; }
+        .section-title {
+            grid-column: span 4;
+            color: var(--text-dim);
+            font-size: 14px;
+            font-weight: 700;
+            margin: 26px 0 12px 4px;
+            letter-spacing: 0.2px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-title::before { content: ""; width: 3px; height: 13px; background: var(--accent-color); border-radius: 2px; display: inline-block; }
+        .item-btn {
+            background: var(--surface-2);
+            border: 1px solid var(--hairline-soft);
+            color: var(--text-color);
+            padding: 0px 2px;
+            min-width: 0;
+            overflow: hidden;
+            border-radius: var(--radius-xl);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            aspect-ratio: 1 / 1;
+            width: 100%;
+            height: auto;
+            box-shadow: var(--premium-shadow), inset 0 1px 0 rgba(255,255,255,0.03);
+            box-sizing: border-box;
+            transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.2s;
+        }
+        .item-btn:active { transform: scale(0.93); border-color: var(--hairline); background: #1f232f; }
+        .item-btn .flag { font-size: clamp(32px, 11vw, 40px); line-height: 1; margin-bottom: 2px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.35)); }
+        .item-btn .name { margin-top: 0px; font-size: clamp(11.5px, 3.7vw, 14px); font-weight: 800; white-space: normal; word-break: keep-all; overflow: hidden; text-align: center; width: 100%; max-height: 2.3em; line-height: 1.15; letter-spacing: -0.2px; color: #d9dbe2; }
+        .major-btn { border-color: rgba(111, 160, 194, 0.28); }
+        .major-btn:active { background: #1a2733; border-color: var(--sapphire); }
+
+        #phrase-view {
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 70px);
+            overflow: hidden;
+            padding-bottom: 0;
+        }
+        .phrase-header-sticky {
+            max-height: 35vh;
+            overflow-y: auto;
+            flex-shrink: 0;
+            background: var(--bg-color);
+            z-index: 10;
+        }
+        .admin-bar { display: flex; gap: 8px; margin-bottom: 8px; background: var(--card-bg); padding: 6px 10px; border-radius: var(--border-radius-lg); align-items: center; border: 1px solid var(--hairline-soft); box-shadow: var(--premium-shadow); }
+        .admin-label { font-size: 13px; color: var(--accent-color); font-weight: 800; min-width: 46px; text-align: center; letter-spacing: 0.2px; }
+        .action-btn { padding: 6px 2px; border-radius: var(--border-radius-sm); border: none; font-size: 15px; font-weight: 800; color: #f4f1ea; flex: 1; min-height: 38px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.14), 0 4px 10px rgba(0,0,0,0.28); cursor: pointer; transition: filter 0.2s, transform 0.15s; white-space: nowrap; }
+        .action-btn:active { filter: brightness(0.88); transform: scale(0.97); }
+        #category-nav { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 0 0 14px 0; }
+        #category-nav .cat-tab { padding: 16px 6px; font-size: 17px; }
+        #category-trigger { display: flex; align-items: center; gap: 12px; background: var(--card-bg); border: 1px solid var(--hairline-soft); border-radius: var(--border-radius-lg); padding: 12px 10px; margin-bottom: 8px; cursor: pointer; box-shadow: var(--premium-shadow); }
+        #category-trigger:active { border-color: var(--hairline); }
+        .ct-label { font-size: 13px; font-weight: 800; color: var(--accent-color); min-width: 46px; text-align: center; }
+        #category-current { flex: 1; font-size: 18px; font-weight: 700; color: var(--text-color); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .ct-arrow { color: var(--accent-color); font-size: 18px; padding-right: 6px; }
+        #category-popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.62); display: none; align-items: flex-end; z-index: 2500; }
+        .cat-sheet { width: 100%; max-height: 78vh; overflow-y: auto; background: var(--card-bg); border-top: 1px solid var(--hairline); border-radius: 22px 22px 0 0; padding: 12px 16px 26px; box-sizing: border-box; }
+        .cat-sheet-handle { width: 44px; height: 4px; background: var(--text-faint); border-radius: 2px; margin: 0 auto 16px; opacity: 0.6; }
+        #toast { position: fixed; left: 50%; bottom: 110px; transform: translateX(-50%); background: rgba(27,30,40,0.96); color: var(--text-color); padding: 12px 22px; border-radius: 999px; border: 1px solid var(--hairline); font-size: 15px; font-weight: 700; z-index: 5000; display: none; white-space: nowrap; }
+        .cat-tab { background: var(--card-bg); padding: 8px 2px; border-radius: var(--border-radius-sm); text-align: center; font-size: 15px; color: var(--text-dim); border: 1px solid var(--hairline-soft); font-weight: 700; transition: all 0.2s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .cat-tab.active { background: linear-gradient(150deg, var(--accent-bright), var(--accent-color)); color: #201802; border-color: transparent; font-weight: 800; box-shadow: 0 8px 18px -6px rgba(201,162,39,0.45); }
+
+        #phrase-list-area {
+            flex: 1;
+            overflow-y: auto;
+            padding-bottom: 24px;
+        }
+        .phrase-table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--premium-shadow); border: 1px solid var(--hairline-soft); }
+        .phrase-row { border-bottom: 1px solid var(--table-border); transition: background-color 0.2s; }
+        .phrase-row td { padding: 22px 18px; font-size: 20px; line-height: 1.5; font-weight: 600; color: var(--text-color); }
+        .phrase-row.selected { background: rgba(201,162,39,0.1); border-left: 4px solid var(--accent-color); }
+
+        .bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(10, 11, 16, 0.92); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 10px 20px 18px 20px; border-top: 1px solid var(--hairline); z-index: 1500; box-sizing: border-box; }
+        .nav-btn { background: var(--surface-2); border: 1px solid var(--hairline-soft); color: var(--text-color); padding: 8px 12px; border-radius: var(--radius-xl); text-align: center; font-weight: 700; font-size: 18px; transition: background 0.2s; }
+        .nav-btn:active { background: #10121a; }
+
+        #display-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000000; display: none; z-index: 2600; flex-direction: column; box-sizing: border-box; }
+        #text-country { flex-shrink: 0; padding: 9px 28px; font-size: 16px; font-weight: 800; letter-spacing: 0.3px; color: var(--accent-bright); border-bottom: 1px solid var(--hairline); background: #050608; }
+        #text-country:empty { display: none; }
+        #scroll-container { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 20px 28px 24px 28px; scroll-behavior: auto !important; }
+        #text-ko { flex-shrink: 0; font-size: 19px; color: var(--text-dim); margin: 0; padding: 18px 28px 14px; line-height: 1.45; text-align: left; font-weight: 600; letter-spacing: -0.3px; border-bottom: 1px solid var(--hairline); max-height: 24vh; overflow-y: auto; }
+        #text-foreign { font-weight: 700; font-size: 44px; line-height: 1.4; color: var(--accent-bright); text-align: left; padding-bottom: 24px; text-shadow: 0 6px 26px rgba(201,162,39,0.2); letter-spacing: -0.3px; }
+
+        #tour-view {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-color);
+            color: var(--text-color);
+            z-index: 2000;
+            overflow: hidden;
+            box-sizing: border-box;
+            flex-direction: column;
+        }
+        .tour-header-sticky {
+            flex-shrink: 0;
+            background: var(--bg-color);
+            z-index: 10;
+        }
+        #tour-list {
+            flex: 1;
+            overflow-y: auto;
+            padding-bottom: 24px;
+            position: relative;
+        }
+        .tour-row { border-bottom: 1px solid var(--table-border); padding: 0 0 0 20px; display: flex; align-items: stretch; font-size: 23px; font-weight: 700; color: var(--text-color); transition: background-color 0.2s; }
+        .tour-row.selected { background: rgba(74,119,150,0.14); border-left: 4px solid var(--sapphire); }
+        .hidden { display: none !important; }
+        .editor-view { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-color); display: none; z-index: 3000; flex-direction: column; padding: 20px; box-sizing: border-box; }
+        .editor-view textarea { background: var(--card-bg); color: var(--text-color); border: 1px solid var(--hairline-soft); padding: 20px; border-radius: var(--radius-xl); font-size: 19px; font-weight: 600; flex: 1; resize: none; margin-bottom: 16px; outline: none; box-shadow: inset 0 2px 8px rgba(0,0,0,0.35); }
+        .editor-view textarea:focus { border-color: var(--accent-color); }
+        .editor-view input { background: var(--card-bg); color: var(--text-color); border: 1px solid var(--hairline-soft); padding: 18px; margin-bottom:16px; border-radius: var(--radius-xl); font-size:17px; font-weight: 600; outline: none; box-shadow: inset 0 2px 8px rgba(0,0,0,0.35); }
+        .editor-view input:focus { border-color: var(--accent-color); }
+
+        .tour-topbar { position: relative; flex-shrink: 0; height: 70px; display: flex; justify-content: center; align-items: center; border-bottom: 1px solid var(--hairline); background: rgba(10,11,16,0.92); box-sizing: border-box; margin-bottom: 8px; }
+        #tour-header-title, #tr-title { font-family: 'Noto Serif KR', serif; font-weight: 700; font-size: 21px; letter-spacing: 0.2px; background: linear-gradient(135deg, var(--accent-bright), var(--accent-color) 55%, var(--accent-deep)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        #tour-search-trigger { position: absolute; right: 20px; width: 52px; height: 52px; border-radius: 50%; background: var(--surface-2); color: var(--text-color); display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 14px; font-weight: 700; border: 1px solid var(--hairline-soft); box-shadow: var(--premium-shadow); }
+        #tour-search-input-container { position: absolute; right: 20px; top: 13px; display: none; align-items: center; background: var(--surface-2); border-radius: 25px; padding: 5px 18px; border: 1px solid var(--hairline); width: 220px; height: 44px; box-sizing: border-box; box-shadow: var(--premium-shadow); }
+        #tour-search-input-container input { background: transparent; border: none; color: var(--text-color); outline: none; width: 100%; font-size: 16px; font-weight: 600; }
+        /* 관광지 드래그 정렬 */
+        .tour-name { flex: 1; min-width: 0; padding: 10px 0; display: flex; align-items: center; line-height: 1.25; }
+        .tour-name:last-child { padding-right: 20px; }
+        .tour-grip { display: flex; align-items: center; padding: 0 22px 0 18px; touch-action: none; cursor: grab; -webkit-touch-callout: none; user-select: none; -webkit-user-select: none; }
+        .tour-grip i { display: block; width: 24px; height: 16px; opacity: 0.55; background:
+            linear-gradient(var(--text-dim), var(--text-dim)) 0 0 / 100% 3px no-repeat,
+            linear-gradient(var(--text-dim), var(--text-dim)) 0 50% / 100% 3px no-repeat,
+            linear-gradient(var(--text-dim), var(--text-dim)) 0 100% / 100% 3px no-repeat; }
+        .tour-row.selected .tour-grip i { opacity: 0.9; }
+        .tour-row.dragging { position: relative; z-index: 5; background: var(--surface-2); box-shadow: 0 18px 38px rgba(0,0,0,0.65), 0 0 0 2px var(--accent-color); border-radius: 12px; border-bottom-color: transparent; transition: none; }
+        #drag-slot { position: absolute; left: 0; right: 0; z-index: 1; pointer-events: none; background: rgba(201,162,39,0.10); border-top: 3px solid var(--accent-color); border-bottom: 3px solid var(--accent-color); box-sizing: border-box; }
+        .tour-admin { gap: 5px; padding: 6px 8px; }
+        .tour-admin .action-btn { font-size: 14px; }
+        #tour-list-btn { flex: none; width: 46px; height: 46px; border-radius: 50%; padding: 0; border: 1px solid var(--hairline); background: var(--surface-2); color: var(--accent-bright); font-size: 12px; font-weight: 800; letter-spacing: -0.5px; cursor: pointer; box-shadow: inset 0 1px 0 rgba(255,255,255,0.10), 0 4px 10px rgba(0,0,0,0.28); }
+        #tour-list-btn.on { background: linear-gradient(150deg, var(--accent-bright), var(--accent-color)); color: #201802; border-color: transparent; }
+        .tour-admin.sorted .mv { opacity: 0.3; pointer-events: none; }
+
+        /* 번역기 (모든 화면 공통 플로팅 버튼 + 번역 입력 화면) */
+        #translator-fab { touch-action: none; position: fixed; right: 16px; bottom: 92px; width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(150deg, var(--accent-bright), var(--accent-color)); display: flex; align-items: center; justify-content: center; z-index: 2100; cursor: pointer; box-shadow: 0 10px 24px -8px rgba(201,162,39,0.55), inset 0 1px 0 rgba(255,255,255,0.25); transition: transform 0.15s; }
+        #translator-fab:active { transform: scale(0.92); }
+        #translator-fab svg { width: 26px; height: 26px; fill: #201802; }
+        #translator-view { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-color); display: none; flex-direction: column; z-index: 2200; box-sizing: border-box; }
+        .tr-body { flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: hidden; padding: 12px 6px 14px; } /* 좌우 여백을 줄여 대화창을 넓힘 */
+        .tr-panel { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-bottom: 14px; position: relative; transition: flex .3s ease, opacity .3s ease; }
+        .tr-panel.speaker { flex: 7; } /* 말하는 칸을 길게 늘림 (폰 기준) */
+        .tr-panel.listener { flex: 0 0 auto; } /* 듣는 칸은 필요한 만큼만(얇게), 나머지는 말하는 칸이 차지 */
+        .tr-box { position: relative; flex: 1; min-height: 0; display: flex; }
+        .tr-panel.listener > .tr-actions, .tr-panel.listener .tr-box > textarea { opacity: 0.1; }
+        .tr-panel.listener > .tr-lang-row { opacity: 0.6; } /* 국가명은 "Tap here and speak"와 같은 밝기 */
+        .tr-note { position: absolute; left: 20px; right: 20px; top: 10px; padding-bottom: 8px; border-bottom: 2px solid rgba(255,255,255,0.25); font-size: 30px; font-weight: 800; line-height: 1.3; color: #eef0f4; pointer-events: none; z-index: 2; text-align: left; max-height: 5.2em; overflow: hidden; } /* 상대방이 한 말: 뒷좌석에서도 보이게 두 배 크기 */
+        .tr-note:empty { display: none; }
+        #translator-view .tr-box:has(.tr-note:not(:empty)) textarea { padding-top: var(--note-h, 48px) !important; } /* 겹침 고침: 상대 말(큰 글) 아래부터 입력 글자 */ /* 작은 글씨가 있으면 입력 글자는 그 아래부터 */
+        .tr-panel.listener .tr-note { opacity: 0.2; }
+        #translator-view .tr-panel.listener textarea { min-height: 44px; }
+        .tr-panel.listener .tr-box { min-height: 60px; } /* 듣는 칸이 너무 줄어 글자가 겹치지 않게 최소 높이 */
+        .tr-panel.listener #tr-speak-now { font-size: 22px !important; bottom: 50%; transform: translateY(50%); } /* 듣는 칸 안내는 작게, 가운데 */
+        #translator-view .tr-panel.speaker textarea { background: #4b5468; }
+        .tr-panel.speaker textarea { border: 2px solid var(--accent-color); background: #4b5468; box-shadow: 0 0 22px -6px rgba(224,184,74,.55); padding-right: 64px; } /* 말하는 칸 바탕을 밝게 */
+        .tr-role { position: absolute; right: 12px; top: 12px; display: none; flex-direction: column; align-items: center; gap: 2px; pointer-events: none; z-index: 2; }
+        .tr-panel.speaker .tr-role { display: flex; opacity: 0.45; } /* 입술은 말하는 쪽에만, 희미하게, 깜빡임 없음. 듣는 쪽은 귀·글씨 없음 */
+        .tr-role .tr-icon { font-size: 40px; line-height: 1; }
+        .tr-role .tr-say { display: none; } /* 입술 아래 글씨는 아래 안내 문구와 겹쳐서 표시 안 함 */
+        @keyframes sayBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+        .tr-panel.listener .tr-lang-row select { pointer-events: none; } /* 듣는 쪽일 때는 나라 선택창이 열리지 않게 막음 */
+        .tr-body > .tr-panel:first-child .tr-role { display: none !important; } /* 한국어 쪽에는 귀·입술 표시 안 함 */
+        .tr-panel:last-of-type { margin-bottom: 0; }
+        .tr-lang-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+        .tr-lang-row.reversed { flex-direction: row-reverse; }
+        .tr-from { font-size: 17px; font-weight: 800; color: var(--accent-bright); white-space: nowrap; background: var(--card-bg); border: 1px solid var(--hairline); border-radius: var(--border-radius-lg); padding: 10px 16px; cursor: pointer; }
+        #sense-bubble { position: absolute; display: none; gap: 6px; padding: 8px; box-sizing: border-box; background: #fff; border: 2.5px solid #222; border-radius: 22px; z-index: 5; white-space: nowrap; } #sense-bubble button { border: 2px solid #222; border-radius: 14px; background: #fff; color: #111; font-family: inherit; font-weight: 900; font-size: 16px; padding: 8px 10px; line-height: 1.2; white-space: nowrap; } #sense-bubble small { display: block; font-size: 12px; font-weight: 700; color: #555; }
+        .tr-from:active { background: var(--surface-2); }
+        #tr-paste-top, #tr-kbd-top { flex: 1 1 0; min-width: 0; height: 44px; padding: 0 2px; font-size: 15px; font-weight: 800; display: flex; align-items: center; justify-content: center; color: var(--accent-bright); white-space: nowrap; } /* 복 사·키보드·관 광·한국어를 같은 크기로 나란히 */
+        .tr-lang-row > .tr-from:first-child { flex: 1.6 1 0; min-width: 0; justify-content: center; }
+        .tr-lang-row > button[onclick^="closeTranslator(); openTour()"] { flex: 1 1 0; min-width: 0; height: 44px; padding: 0 2px; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+        .tr-swap { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--hairline); background: var(--surface-2); color: var(--accent-bright); font-size: 20px; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; font-family: inherit; }
+        .tr-swap:active { transform: scale(0.92); }
+        #tr-lang { flex: 1; min-width: 0; background: var(--card-bg); color: var(--text-color); border: 1px solid var(--hairline-soft); border-radius: var(--border-radius-lg); padding: 10px 12px; font-size: 34px; font-weight: 700; white-space: nowrap; outline: none; font-family: inherit; }
+        #tr-input, #tr-input2 { width: 100%; flex: 1; min-height: 70px; background: var(--card-bg); color: var(--text-color); border: 1px solid var(--hairline-soft); border-radius: var(--radius-xl); padding: 18px; font-size: 19px; font-weight: 600; resize: none; outline: none; box-sizing: border-box; box-shadow: inset 0 2px 8px rgba(0,0,0,0.35); font-family: inherit; -webkit-user-select: text; user-select: text; }
+        #tr-input:focus { border-color: var(--accent-color); }
+        #tr-input2 { cursor: pointer; }
+        #tr-speak-now { display: block; position: absolute; left: 10px; right: 10px; bottom: 14px; text-align: center; white-space: nowrap; overflow: hidden; font-size: 34px; font-weight: 900; line-height: 1.2; letter-spacing: -0.04em; color: var(--text-dim); pointer-events: none; } /* 대기·듣는 중: "Tap here and speak" 흐린 회색, 깜빡임 없음 */
+        #tr-speak-now.live { color: #ffd54a; text-shadow: 0 0 12px rgba(255,213,74,.45); animation: speakBlink 0.33s ease-in-out infinite; } /* 마이크가 켜지면: "Please speak" 노란색 깜빡임 */
+        .tr-panel.listener #tr-speak-now { opacity: 0.6; }
+        .tr-body > .tr-panel + .tr-panel.listener > .tr-actions { display: none; } /* 맨 밑 줄(흐린 마이크·지우기·통역 버튼)은 외국어 쪽이 듣는 동안 없앰 */
+        .tr-panel.listener { margin-bottom: 0; } /* 맨 밑 여백 제거 */
+        .tr-panel.listener > .tr-lang-row { margin-bottom: 2px; } /* 국가명과 아래 칸 사이 줄간격 줄임 */
+        .tr-panel.listener .tr-box { min-height: 48px; }
+        .tr-body > .tr-panel + .tr-panel.listener > .tr-box { flex: 0 0 40px; min-height: 0; height: 40px; } /* 아래 외국어 칸: "Tap here and speak" 한 줄 높이만 남기고 맨 아래로 */
+        #translator-view .tr-body > .tr-panel + .tr-panel.listener textarea { min-height: 0; height: 40px; padding: 0; border: none; box-shadow: none; background: transparent; }
+        .tr-body > .tr-panel + .tr-panel.listener #tr-speak-now { bottom: 50%; }
+        .tr-body:has(> .tr-panel + .tr-panel.listener) { padding-bottom: 18px; } /* 맨 밑 안내 줄이 폰 하단 버튼에 붙지 않게 약간 띄움 */
+        .tr-body > .tr-panel.listener:first-child > .tr-box, .tr-body > .tr-panel.listener:first-child > .tr-actions { display: none; } /* 외국인이 말할 때 위쪽 흐린 한국어 칸·버튼 줄 숨김, "Korean" 줄만 남김 */
+        /* 2026-10-15: 통역 버튼은 Korean·관광 글자와 같은 노랑 / 버튼 4개 크기 통일 / 외국인 말하는 칸 흰 바탕·검은 글자·글자 2배 */
+        #translator-view .tr-actions .tr-go { background: var(--accent-bright) !important; color: #201802; }
+        #translator-view .tr-actions button, #translator-view .tr-mic { flex: 1 1 0 !important; height: 52px; min-width: 0; }
+        #translator-view #tr-kbd, #translator-view #tr-mic, #translator-view #tr-mic2 { font-size: 44px !important; line-height: 1; } /* 마이크·자판 그림을 칸에 꽉 차게 */
+        #translator-view .tr-actions { gap: 14px; } /* 버튼 사이를 조금 띄워 구획이 보이게 */
+        #translator-view #tr-kbd, #translator-view .tr-actions button[onclick^="clearTranslator"] { background: var(--accent-bright) !important; color: #201802 !important; border-color: transparent !important; } /* 자판·지우기도 통역과 같은 노랑, 검은 글자 */
+        #translator-view .tr-body > .tr-panel + .tr-panel.speaker textarea { background: #ffffff !important; color: #111111; font-size: 38px; line-height: 1.3; padding-right: 76px !important; }
+        #translator-view .tr-body > .tr-panel + .tr-panel.speaker #tr-speak-now { color: #777777; }
+        #translator-view .tr-body > .tr-panel + .tr-panel.speaker #tr-speak-now.live { color: #111111; text-shadow: none; }
+        #translator-view .tr-body > .tr-panel + .tr-panel.speaker .tr-note { color: #222222; border-bottom-color: #cccccc; } /* 상대 말과 새로 말하는 글 사이를 선으로 구분 */
+        @keyframes speakBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0.15; } }
+        #tr-input::placeholder, #tr-input2::placeholder { color: var(--text-faint); }
+        .tr-actions { display: flex; gap: 10px; margin-top: 8px; }
+        .tr-mic { flex: 0 0 46px; padding: 0 !important; font-size: 24px !important; background: var(--surface-2); color: var(--text-color); }
+        .tr-mic.on { background: var(--ruby); border-color: transparent; animation: micPulse 1.2s ease-out infinite; }
+        @keyframes micPulse { 0% { box-shadow: 0 0 0 0 rgba(162,68,68,0.55); } 100% { box-shadow: 0 0 0 16px rgba(162,68,68,0); } }
+        #tr-input.listening, #tr-input2.listening { border-color: var(--ruby); }
+        #tr-voice-status { display: none; margin-top: 10px; font-size: 14px; line-height: 1.55; color: var(--text-dim); font-weight: 600; }
+        #tr-voice-status.err { color: #e6a3a3; }
+        .tr-go { flex: 1.6; background: linear-gradient(150deg, var(--accent-bright), var(--accent-color)); color: #201802; border-color: transparent !important; }
+        .tr-actions { flex-shrink: 0; }
+        .tr-actions button { height: 42px; padding: 0 6px; white-space: nowrap; overflow: hidden; line-height: 1; border-radius: 14px; font-size: 25px; font-weight: 900; cursor: pointer; border: 1px solid var(--hairline-soft); font-family: inherit; }
+        /* 인사말 */
+        .greet-layer { position: fixed; inset: 0; background: var(--bg-color); display: none; flex-direction: column; z-index: 2300; }
+        .greet-top { flex: none; height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; border-bottom: 1px solid var(--hairline); font-size: 21px; font-weight: 800; color: var(--accent-bright); }
+        .greet-x { font-size: 26px; color: var(--text-dim); padding: 8px; cursor: pointer; }
+        .greet-body { flex: 1; overflow-y: auto; padding: 14px 16px 40px; }
+        .greet-row { background: var(--card-bg); border: 1px solid var(--hairline-soft); border-radius: 16px; padding: 14px 16px; margin-bottom: 10px; cursor: pointer; display: flex; align-items: center; gap: 12px; }
+        .greet-row:active { background: var(--surface-2); }
+        .greet-row.selected { background: rgba(201,162,39,0.1); border-left: 4px solid var(--accent-color); } /* 고른 인사말: 문구 화면처럼 옆줄 표시 */
+        .greet-admin { flex: none; margin: 0 16px 14px; }
+        .greet-ko { font-size: 15px; font-weight: 700; color: var(--text-dim); }
+        .greet-fx { font-size: 24px; font-weight: 800; color: var(--text-color); margin: 3px 0; line-height: 1.3; }
+        .greet-pr { font-size: 20px; font-weight: 800; color: var(--accent-bright); }
+        .greet-play { flex: none; font-size: 26px; }
+        .greet-edit-row { display: flex; align-items: center; gap: 10px; padding: 14px 4px; border-bottom: 1px solid var(--table-border); font-size: 19px; font-weight: 700; }
+        #translator-view .tr-icon:empty { display: none; } /* 입술 그림 없앰 */
+        .tr-body > .tr-panel + .tr-panel.listener .tr-note { display: none; } /* 아래로 접힌 손님 칸에서는 큰 글이 밖으로 넘치지 않게 숨김 */
+        #tr-speak-now.two { white-space: normal; display: flex; align-items: center; justify-content: center; gap: 12px; } /* 손님이 말할 때 안내: 원래 자리(칸 아래), 왼쪽 마이크 + 가운데 맞춘 두 줄 */
+        #tr-speak-now.two .sn-mic { flex: none; font-size: 56px; line-height: 1; }
+        #tr-speak-now.two .sn-col { display: flex; flex-direction: column; align-items: center; min-width: 0; }
+        #tr-speak-now.two .sn-l { display: block; white-space: nowrap; line-height: 1.15; font-weight: 900; }
+        #tr-speak-now.two .sn-l + .sn-l { margin-top: 4px; }
+        #translator-view .tr-box:has(.tr-note:not(:empty)) .tr-icon { display: none; } /* 상대 말(큰 글)이 있으면 귀 그림이 글을 가리지 않게 숨김 */
+        /* ===== 단어장 · 말풍선 ===== */
+        #translator-view .tr-panel:first-child .tr-box { position: relative; }
+        #fix-bubble { display: none; position: absolute; z-index: 5; cursor: pointer; filter: drop-shadow(0 6px 10px rgba(0,0,0,0.45)); }
+        #fix-bubble span { color: #111; font-size: 30px; font-weight: 800; white-space: nowrap; line-height: 1.2; padding: 4px 6px; }
+        .words-tabs { flex: none; display: flex; gap: 10px; padding: 12px 16px 0; }
+        .words-tab { flex: 1 1 0; min-height: 56px; border-radius: 14px; border: 1px solid var(--hairline-soft); background: var(--card-bg); color: var(--text-dim); font-size: 18px; font-weight: 800; font-family: inherit; padding: 6px; }
+        .words-tab.on { background: var(--surface-2); color: var(--text-color); border: 2px solid var(--accent-color); }
+        .w-in { width: 100%; box-sizing: border-box; background: var(--card-bg); color: var(--text-color); border: 1px solid var(--hairline-soft); border-radius: 14px; padding: 14px; font-size: 22px; font-weight: 700; outline: none; font-family: inherit; margin-bottom: 10px; }
+        .w-add { width: 100%; height: 56px; border: none; border-radius: 14px; font-size: 22px; font-weight: 800; background: var(--accent-bright); color: #201802; font-family: inherit; margin-bottom: 16px; }
+        .w-lab { font-size: 16px; font-weight: 700; color: var(--text-dim); margin: 0 2px 6px; }
+        .w-wrong { color: var(--text-dim); text-decoration: line-through; font-size: 22px; }
+        .w-arrow { color: var(--text-dim); font-size: 22px; }
+        .w-right { flex: 1; min-width: 0; font-size: 22px; font-weight: 800; color: var(--text-color); }
+        .w-ro { font-size: 17px; color: var(--text-dim); font-weight: 700; }
+        .w-del { flex: none; border: none; border-radius: 12px; padding: 10px 14px; font-size: 17px; font-weight: 800; background: var(--ruby); color: #fff; font-family: inherit; }
+        #tr-input[readonly], #tr-input2[readonly] { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; } /* 길게 누르기를 붙여넣기에 쓰려고 글자 선택 막음 (고치는 중에는 선택 가능) */
+    </style>
+<style>
+  .arr-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 16px; }
+  .arr-btn { min-height: 64px; border-radius: 16px; border: 1px solid var(--hairline); background: var(--surface-2); color: var(--accent-bright); font-family: inherit; font-size: 22px; font-weight: 800; cursor: pointer; }
+  .arr-btn:active { background: #10121a; }
+</style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="menu-btn" id="menu-btn" onclick="toggleMenu()"><div></div><div></div><div></div></div>
+        <div id="head-greet-btn" onclick="openGreet()" style="position:absolute; left:58px; width:44px; height:44px; border-radius:50%; background:var(--surface-2); border:1px solid var(--hairline); display:flex; align-items:center; justify-content:center; font-size:22px; cursor:pointer; z-index:1001;">👋</div>
+        <span id="header-title">ALADIN TAXI</span>
+        <div id="rate-btn" onclick="sayRateRequest()" title="좋은 평가 부탁" style="position:absolute; left:8px; width:44px; height:44px; border-radius:50%; background:linear-gradient(150deg, var(--accent-bright), var(--accent-color)); display:flex; align-items:center; justify-content:center; font-size:22px; cursor:pointer; z-index:1001; box-shadow:0 8px 20px -8px rgba(201,162,39,0.6);">⭐</div>
+        <div id="search-trigger" onclick="toggleSearch()">검색</div>
+        <div id="search-input-container">
+            <input type="text" id="search-input" placeholder="검색어 입력..." oninput="handleSearch(this.value)">
+            <span style="color:var(--text-dim); cursor:pointer; font-size: 20px; padding-left: 5px;" onclick="toggleSearch()">✕</span>
+        </div>
+        
+    </header>
+    <div id="side-menu">
+        <h2 style="font-family:'Noto Serif KR',serif; color:var(--accent-bright); margin-bottom:30px; font-weight: 700; font-size: 22px; letter-spacing: 0.2px;">고급 설정</h2>
+        <div class="menu-item" onclick="exportData()">📤 데이터 백업 (내보내기)</div>
+        <div class="menu-item" onclick="importData()">📥 데이터 복원 (가져오기)</div>
+        <div class="menu-item" onclick="toggleMenu(); openGreetEditor()">👋 인사말 넣기</div>
+        <div class="menu-item" onclick="toggleMenu(); openWords()">📖 단어장</div>
+        <button onclick="toggleMenu()" style="margin-top:50px; width:100%; padding:18px; background:var(--surface-2); color:var(--text-color); border:1px solid var(--hairline-soft); border-radius:var(--radius-xl); font-size: 16px; font-weight: 700; cursor:pointer;">설정 닫기</button>
+    </div>
+    <div class="container" id="country-view">
+    <div class="arr-row">
+        <button class="arr-btn" onclick="AladdinArrivals.open('airport')">✈️ 공항</button>
+        <button class="arr-btn" onclick="AladdinArrivals.open('train')">🚆 열차</button>
+    </div>
+        <div id="country-top" style="position:sticky; top:70px; z-index:50; background:var(--bg-color); margin:-16px -16px 0; padding:16px 16px 4px;">
+        <div id="last-country-btn" onclick="openLastCountry()" style="display:none; align-items:center; gap:12px; padding:14px 18px; margin-bottom:12px; border-radius:var(--radius-xl); background:var(--major-grad); border:1px solid var(--accent-color); box-shadow:var(--premium-shadow); cursor:pointer; font-size:22px; font-weight:800; color:var(--text-color);"><span id="last-country-flag" style="font-size:32px; line-height:1;"></span><span id="last-country-name" style="flex:1; min-width:0;"></span><span onclick="event.stopPropagation(); openGreet()" style="flex:none; width:46px; height:46px; border-radius:50%; background:var(--surface-2); border:1px solid var(--hairline); display:flex; align-items:center; justify-content:center; font-size:24px;">👋</span><span style="color:var(--accent-bright); font-size:20px;">▶</span></div>
+        <input type="text" id="country-search" class="country-search-bar" placeholder="찾으시는 국가명을 입력하세요..." oninput="filterCountries(this.value)">
+        </div>
+        <div id="major-section"><div class="section-title">영어권 국가</div><div id="major-list" class="grid"></div></div>
+        <div id="other-section"><div class="section-title">비영어권 국가</div><div id="other-list" class="grid"></div></div>
+    </div>
+
+    <div id="tour-view">
+        <div class="tour-topbar">
+            <div onclick="openGreet()" style="position:absolute; left:14px; width:52px; height:52px; border-radius:50%; background:var(--surface-2); border:1px solid var(--hairline); display:flex; align-items:center; justify-content:center; font-size:26px; cursor:pointer;">👋</div>
+            <span id="tour-header-title"></span>
+            <div id="tour-search-trigger" onclick="toggleTourSearch()">검색</div>
+            <div id="tour-search-input-container">
+                <input type="text" id="tour-search-input" placeholder="관광지명 검색..." oninput="filterTour(this.value)">
+                <span style="color:var(--text-dim); cursor:pointer; font-size: 20px; padding-left: 5px;" onclick="toggleTourSearch()">✕</span>
+            </div>
+        </div>
+        <div class="tour-header-sticky">
+            <div class="admin-bar tour-admin">
+                <button id="tour-list-btn" onclick="toggleTourSort()">리스트</button>
+                <button onclick="openTourEditor()" class="action-btn" style="background:var(--emerald)">추가</button>
+                <button onclick="moveTourToTop()" class="action-btn mv" style="background:var(--sapphire)">⤒</button>
+                <button onclick="moveTourToBottom()" class="action-btn mv" style="background:var(--sapphire)">⤓</button>
+                <button onclick="moveTour(-1)" class="action-btn mv" style="background:var(--sapphire)">▲</button>
+                <button onclick="moveTour(1)" class="action-btn mv" style="background:var(--sapphire)">▼</button>
+                <button onclick="openTourEditor(selectedTourIdx)" class="action-btn" style="background:var(--slate)">수정</button>
+                <button onclick="deleteTour()" class="action-btn" style="background:var(--ruby)">삭제</button>
+            </div>
+        </div>
+        <div id="tour-list"></div>
+    </div>
+
+    <div id="tour-editor" class="editor-view">
+        <input type="text" id="edit-tour-name" placeholder="장소 명칭"><textarea id="edit-tour-desc" placeholder="안내 문구 내용을 입력하세요"></textarea>
+        <div style="display:flex; gap:14px;"><button onclick="saveTourData()" style="flex:1; padding:22px; background:linear-gradient(150deg, var(--accent-bright), var(--accent-color)); border:none; border-radius:var(--radius-xl); font-weight:800; font-size:19px; color:#201802;">저장하기</button><button onclick="closeTourEditor()" style="flex:1; padding:22px; background:var(--surface-2); color:var(--text-color); border:1px solid var(--hairline-soft); border-radius:var(--radius-xl); font-size:19px; font-weight:700;">취소</button></div>
+    </div>
+    <div class="container hidden" id="phrase-view">
+        <div class="phrase-header-sticky">
+            <div id="category-trigger" onclick="openCategoryPopup()"><span class="ct-label">분류</span><span id="category-current"></span><span class="ct-arrow">▾</span></div>
+            <div class="admin-bar" id="phrase-admin-bar"><span class="admin-label">문장</span><button onclick="openPhraseEditor(-1)" class="action-btn" style="background:var(--emerald)">추가</button><button onclick="movePhrase(-1)" class="action-btn" style="background:var(--sapphire)">▲</button><button onclick="movePhrase(1)" class="action-btn" style="background:var(--sapphire)">▼</button><button onclick="openPhraseEditor(selectedPhraseIdx)" class="action-btn" style="background:var(--slate)">수정</button><button onclick="deletePhrase()" class="action-btn" style="background:var(--ruby)">삭제</button></div>
+        </div>
+        <div id="phrase-list-area"></div>
+    </div>
+    <div id="category-popup" onclick="closeCategoryPopup()">
+        <div class="cat-sheet" onclick="event.stopPropagation()">
+            <div class="cat-sheet-handle"></div>
+            <div id="category-nav"></div>
+            <div class="admin-bar" id="category-admin-bar"><span class="admin-label">분류</span><button onclick="addCategory()" class="action-btn" style="background:var(--emerald)">추가</button><button onclick="moveCategory(-1)" class="action-btn" style="background:var(--sapphire)">◀</button><button onclick="moveCategory(1)" class="action-btn" style="background:var(--sapphire)">▶</button><button onclick="editCategory()" class="action-btn" style="background:var(--slate)">수정</button><button onclick="deleteCategory()" class="action-btn" style="background:var(--ruby)">삭제</button></div>
+        </div>
+    </div>
+    <div id="phrase-editor" class="editor-view">
+        <h2 style="font-family:'Noto Serif KR',serif; color:var(--accent-bright); margin-bottom:20px; font-weight:700; font-size: 22px;">문장 편집</h2><textarea id="edit-phrase-ko" placeholder="한국어 문장을 입력하세요"></textarea>
+        <div style="display:flex; gap:14px;"><button onclick="savePhraseData()" style="flex:1; padding:22px; background:linear-gradient(150deg, var(--accent-bright), var(--accent-color)); border:none; border-radius:var(--radius-xl); font-weight:800; font-size:19px; color:#201802;">저장하기</button><button onclick="closePhraseEditor()" style="flex:1; padding:22px; background:var(--surface-2); color:var(--text-color); border:1px solid var(--hairline-soft); border-radius:var(--radius-xl); font-size:19px; font-weight:700;">취소</button></div>
+    </div>
+    <div id="display-overlay">
+        <div id="text-ko"></div>
+        <div id="text-country"></div>
+        <div id="scroll-container">
+            <div id="top-anchor"></div>
+            <div id="text-foreign" onclick="repeatVoice()"></div>
+        </div>
+    </div>
+    <div id="translator-fab" onclick="fabClick()" title="번역기"><img src="data:image/png;base64,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" alt="" draggable="false" style="width:44px; height:auto; pointer-events:none;"></div>
+    <div id="translator-view">
+        <div class="tr-body">
+            <div class="tr-panel">
+                <div class="tr-lang-row" onclick="if (!event.target.closest('button') &amp;&amp; this.closest('.tr-panel').classList.contains('listener')) toggleVoiceInput(false)"><span class="tr-from">🇰🇷 Korean</span><button id="tr-paste-top" class="tr-from tr-tb" style="margin-left:auto;" onclick="trPasteBtn()" aria-label="붙여넣기">복 사</button><button id="tr-kbd-top" class="tr-from tr-tb" onclick="typeKo()" aria-label="직접 입력">키보드</button></div>
+                <div class="tr-box"><div class="tr-role"><div class="tr-icon"></div><div class="tr-say">말씀하세요</div></div>
+                <textarea id="tr-input" readonly placeholder="🎤 눌러서 말씀하세요" onpointerdown="trBoxDown(this)" onclick="trBoxTap(this)" onblur="this.readOnly=true"></textarea><div id="fix-bubble" onpointerdown="bubbleTap(event)"></div><div id="sense-bubble"></div></div>
+                <div class="tr-actions">
+                    <button id="tr-mic" class="tr-mic" onclick="toggleVoiceInput(false)" oncontextmenu="return false" aria-label="음성 입력">🎤</button>
+                    <button id="tr-kbd" class="tr-mic" onclick="typeKo()" aria-label="직접 입력" style="display:none">⌨️</button>
+                    <button onclick="clearTranslator(false)" style="flex:1; background:var(--surface-2); color:var(--text-color);">지우기</button>
+                    <button onclick="runTranslator(false)" class="tr-go">통역</button>
+                </div>
+            </div>
+            <div class="tr-panel">
+                <div class="tr-lang-row" onclick="if (this.closest('.tr-panel').classList.contains('listener')) toggleVoiceInput(true)"><select id="tr-lang" onchange="trLangChanged()"></select></div>
+                <div class="tr-box"><div class="tr-role"><div class="tr-icon"></div><div class="tr-say">말씀하세요</div></div><textarea id="tr-input2" readonly onclick="if (!(recog && trReverse)) toggleVoiceInput(true)"></textarea><div id="tr-speak-now"></div></div>
+                <div class="tr-actions">
+                    <button id="tr-mic2" class="tr-mic" onclick="toggleVoiceInput(true)" oncontextmenu="return false" aria-label="음성 입력">🎤</button>
+                    <button id="tr-clear2" onclick="clearTranslator(true)" style="flex:1; background:var(--surface-2); color:var(--text-color);">지우기</button>
+                    <button id="tr-go2" onclick="runTranslator(true)" class="tr-go">통역</button>
+                </div>
+            </div>
+            <div id="tr-voice-status"></div>
+        </div>
+    </div>
+    <div id="greet-view" class="greet-layer">
+        <div class="greet-top"><span style="position:relative; display:inline-flex; align-items:center; gap:8px;"><span id="greet-title"></span><span style="font-size:18px;">▼</span><select id="greet-lang" onchange="greetLangChanged()" aria-label="나라 바꾸기" style="position:absolute; inset:0; width:100%; height:100%; opacity:0; font-size:18px;"></select></span><span class="greet-x" onclick="closeGreet()">✕</span></div>
+        <div id="greet-list" class="greet-body"></div>
+        <div class="admin-bar greet-admin"><span class="admin-label">문장</span><button onclick="greetAdd()" class="action-btn" style="background:var(--emerald)">추가</button><button onclick="greetMove(-1)" class="action-btn" style="background:var(--sapphire)">▲</button><button onclick="greetMove(1)" class="action-btn" style="background:var(--sapphire)">▼</button><button onclick="greetEdit()" class="action-btn" style="background:var(--slate)">수정</button><button onclick="greetDelete()" class="action-btn" style="background:var(--ruby)">삭제</button></div>
+    </div>
+    <div id="greet-editor" class="greet-layer">
+        <div class="greet-top"><span>👋 인사말 넣기</span><span class="greet-x" onclick="closeGreetEditor()">✕</span></div>
+        <div class="greet-body">
+            <div style="display:flex; gap:8px; margin-bottom:14px;"><input id="greet-new" placeholder="한국어 인사말 입력" style="flex:1; min-width:0; background:var(--card-bg); color:var(--text-color); border:1px solid var(--hairline-soft); border-radius:14px; padding:14px; font-size:18px; font-weight:700; outline:none;"><button onclick="addGreet()" style="flex:none; border:none; border-radius:14px; padding:0 18px; font-size:20px; font-weight:900; background:var(--emerald); color:#fff;">추가</button></div>
+            <div id="greet-edit-list"></div>
+        </div>
+    </div>
+    <div id="words-editor" class="greet-layer">
+        <div class="greet-top"><span>📖 <span data-t="words">단어장</span></span><span class="greet-x" onclick="closeWords()">✕</span></div>
+        <div class="words-tabs"><button class="words-tab on" onclick="wordsTabTo(0)" data-t="tabFix">잘못 적히는 단어</button><button class="words-tab" onclick="wordsTabTo(1)" data-t="tabNames">고유명사</button></div>
+        <div class="greet-body">
+            <div id="words-pane-fix">
+                <div class="w-lab" data-t="wrong">잘못 적히는 말</div><input id="fx-wrong" class="w-in" placeholder="북한이">
+                <div class="w-lab" data-t="right">맞는 말</div><input id="fx-right" class="w-in" placeholder="부캉이">
+                <button class="w-add" onclick="addFix()" data-t="addBtn">추가</button>
+                <div id="fix-list"></div>
+            </div>
+            <div id="words-pane-name" style="display:none">
+                <div class="w-lab"><span data-t="namesTitle">고유명사 (번역하지 않음)</span> · <span data-t="nameIn">이름</span></div><input id="nm-word" class="w-in" placeholder="부캉이">
+                <button class="w-add" onclick="addName()" data-t="addBtn">추가</button>
+                <div id="name-list"></div>
+            </div>
+        </div>
+    </div>
+    <div id="toast"></div>
+    <script>
+        // ---- 음성 기능이 없는 브라우저(카카오톡 안에서 열린 화면 등) 대비 ----
+        // 음성 기능이 없으면 통역은 성공해도 음성 단계에서 멈춰 "통신 오류"로 보였음 → 글자 통역은 그대로 나오게 하고, 크롬으로 열도록 안내
+        const NO_VOICE = !window.speechSynthesis || typeof window.SpeechSynthesisUtterance === 'undefined';
+        if (NO_VOICE) {
+            try { if (!window.speechSynthesis) window.speechSynthesis = { speaking: false, pending: false, paused: false, cancel() {}, speak() {}, pause() {}, resume() {}, getVoices() { return []; } }; } catch (e) {}
+            try { if (typeof window.SpeechSynthesisUtterance === 'undefined') window.SpeechSynthesisUtterance = function (t) { this.text = t; }; } catch (e) {}
+        }
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js').catch(err => console.log('SW registration failed:', err));
+            });
+        }
+
+        const majorLangs = [
+            {id:'en_us', name:'미국', flag:'🇺🇸'}, {id:'en_gb', name:'영국', flag:'🇬🇧'}, {id:'en_ca', name:'캐나다', flag:'🇨🇦'}, {id:'en_au', name:'호주', flag:'🇦🇺'}, {id:'en_sg', name:'싱가포르', flag:'🇸🇬'},
+            {id:'en_in', name:'인도(영어)', flag:'🇮🇳'}, {id:'en_nz', name:'뉴질랜드', flag:'🇳🇿'}, {id:'en_ie', name:'아일랜드', flag:'🇮🇪'}, {id:'en_za', name:'남아공', flag:'🇿🇦'}, {id:'en_ph', name:'필리핀(영어)', flag:'🇵🇭'}
+        ];
+        const fixedOther = [{id:'ko', name:'한국', flag:'🇰🇷'}, {id:'tw', name:'대만', flag:'🇹🇼'}, {id:'ja', name:'일본', flag:'🇯🇵'}, {id:'zh', name:'중국', flag:'🇨🇳'}];
+        const sortedOther = [
+            {id:'vn', name:'베트남', flag:'🇻🇳'}, {id:'th', name:'태국', flag:'🇹🇭'}, {id:'ph', name:'필리핀(타갈)', flag:'🇵🇭'}, {id:'hk', name:'홍콩', flag:'🇭🇰'}, {id:'my', name:'말레이', flag:'🇲🇾'},
+            {id:'id', name:'인도네시아', flag:'🇮🇩'}, {id:'ru', name:'러시아', flag:'🇷🇺'}, {id:'mn', name:'몽골', flag:'🇲🇳'}, {id:'uz', name:'우즈벡', flag:'🇺🇿'}, {id:'kz', name:'카자흐', flag:'🇰🇿'},
+            {id:'fr', name:'프랑스', flag:'🇫🇷'}, {id:'de', name:'독일', flag:'🇩🇪'}, {id:'es', name:'스페인', flag:'🇪🇸'}, {id:'it', name:'이탈리아', flag:'🇮🇹'}, {id:'tr', name:'튀르키예', flag:'🇹🇷'},
+            {id:'ae', name:'UAE', flag:'🇦🇪'}, {id:'sa', name:'사우디', flag:'🇸🇦'}, {id:'in', name:'인도(힌어)', flag:'🇮🇳'}, {id:'br', name:'브라질', flag:'🇧🇷'}, {id:'mx', name:'멕시코', flag:'🇲🇽'},
+            {id:'nl', name:'네덜란드', flag:'🇳🇱'}, {id:'se', name:'스웨덴', flag:'🇸🇪'}, {id:'pl', name:'폴란드', flag:'🇵🇱'}, {id:'cz', name:'체코', flag:'🇨🇿'}, {id:'eg', name:'이집트', flag:'🇪🇬'},
+            {id:'pt', name:'포르투갈', flag:'🇵🇹'}, {id:'no', name:'노르웨이', flag:'🇳🇴'}, {id:'ne', name:'네팔', flag:'🇳🇵'}, {id:'mm', name:'미얀마', flag:'🇲🇲'},
+            // 2026-10-13 추가 나라
+            {id:'ch', name:'스위스', flag:'🇨🇭'}, {id:'at', name:'오스트리아', flag:'🇦🇹'}, {id:'be', name:'벨기에', flag:'🇧🇪'}, {id:'dk', name:'덴마크', flag:'🇩🇰'}, {id:'fi', name:'핀란드', flag:'🇫🇮'}, {id:'gr', name:'그리스', flag:'🇬🇷'}, {id:'lu', name:'룩셈부르크', flag:'🇱🇺'}, {id:'il', name:'이스라엘', flag:'🇮🇱'}, {id:'qa', name:'카타르', flag:'🇶🇦'}, {id:'kw', name:'쿠웨이트', flag:'🇰🇼'}, {id:'mo', name:'마카오', flag:'🇲🇴'}, {id:'kh', name:'캄보디아', flag:'🇰🇭'}, {id:'bd', name:'방글라데시', flag:'🇧🇩'}, {id:'pk', name:'파키스탄', flag:'🇵🇰'}, {id:'lk', name:'스리랑카', flag:'🇱🇰'}, {id:'arg', name:'아르헨티나', flag:'🇦🇷'}, {id:'cl', name:'칠레', flag:'🇨🇱'}, {id:'co', name:'콜롬비아', flag:'🇨🇴'}, {id:'pe', name:'페루', flag:'🇵🇪'}, {id:'ua', name:'우크라이나', flag:'🇺🇦'}, {id:'hu', name:'헝가리', flag:'🇭🇺'}, {id:'ro', name:'루마니아', flag:'🇷🇴'}
+        ].sort((a, b) => a.name.localeCompare(b.name, 'ko'));
+        const otherLangs = [...fixedOther, ...sortedOther];
+        const enNames = {
+            en_us:'United States', en_gb:'United Kingdom', en_ca:'Canada', en_au:'Australia', en_sg:'Singapore', en_in:'India (English)', en_nz:'New Zealand', en_ie:'Ireland', en_za:'South Africa', en_ph:'Philippines (English)',
+            ko:'Korea', tw:'Taiwan', ja:'Japan', zh:'China', vn:'Vietnam', th:'Thailand', ph:'Philippines (Tagalog)', hk:'Hong Kong', my:'Malaysia', id:'Indonesia', ru:'Russia', mn:'Mongolia', uz:'Uzbekistan', kz:'Kazakhstan',
+            fr:'France', de:'Germany', es:'Spain', it:'Italy', tr:'Türkiye (Turkey)', ae:'United Arab Emirates', sa:'Saudi Arabia', in:'India (Hindi)', br:'Brazil', mx:'Mexico', nl:'Netherlands', se:'Sweden', pl:'Poland', cz:'Czech Republic', eg:'Egypt',
+            pt:'Portugal', no:'Norway', ne:'Nepal', mm:'Myanmar',
+            ch:'Switzerland', at:'Austria', be:'Belgium', dk:'Denmark', fi:'Finland', gr:'Greece', lu:'Luxembourg', il:'Israel', qa:'Qatar', kw:'Kuwait', mo:'Macau', kh:'Cambodia', bd:'Bangladesh', pk:'Pakistan', lk:'Sri Lanka', arg:'Argentina', cl:'Chile', co:'Colombia', pe:'Peru', ua:'Ukraine', hu:'Hungary', ro:'Romania'
+        };
+        function countryLabel(id) { const c = [...majorLangs, ...otherLangs].find(x => x.id === id); return c ? `${c.flag} ${enNames[c.id] || ''}`.trim() : ''; }
+        const langMap = {
+            'en_us':'en', 'en_gb':'en', 'en_ca':'en', 'en_au':'en', 'en_sg':'en', 'en_in':'en', 'en_nz':'en', 'en_ie':'en', 'en_za':'en', 'en_ph':'en',
+            'ko':'ko', 'tw':'zh-TW', 'ja':'ja', 'zh':'zh-CN', 'hk':'zh-HK', 'vn':'vi', 'th':'th', 'ph':'tl', 'my':'ms', 'id':'id', 'mm':'my',
+            'de':'de', 'fr':'fr', 'es':'es', 'it':'it', 'nl':'nl', 'pt':'pt', 'pl':'pl', 'cz':'cs', 'se':'sv', 'tr':'tr', 'ru':'ru',
+            'mn':'mn', 'uz':'uz', 'kz':'kk', 'ae':'ar', 'sa':'ar', 'eg':'ar', 'in':'hi', 'br':'pt', 'mx':'es', 'no':'no', 'ne':'ne',
+            'ch':'de', 'at':'de', 'be':'fr', 'dk':'da', 'fi':'fi', 'gr':'el', 'lu':'fr', 'il':'he', 'qa':'ar', 'kw':'ar', 'mo':'zh-HK', 'kh':'km', 'bd':'bn', 'pk':'ur', 'lk':'si', 'arg':'es', 'cl':'es', 'co':'es', 'pe':'es', 'ua':'uk', 'hu':'hu', 'ro':'ro'
+        };
+        let categories = JSON.parse(localStorage.getItem('taxi_v10_cats')) || ["인사", "목적지", "운행", "요금/결제", "환경/편의", "하차/주의", "긴급/기타"];
+        let phraseDB = JSON.parse(localStorage.getItem('taxi_v10_db')) || {"인사": [{ko: "안녕하세요. 어디로 모실까요?"}]};
+        let tourDB = JSON.parse(localStorage.getItem('taxi_v10_tour')) || [];
+        let curL = '', lastL = '', lastSpeakLang = '', curC = categories[0], lastTranslated = '', isTourMode = false, selectedPhraseIdx = -1, selectedTourIdx = -1, isSearchActive = false, searchResults = [];
+
+        // 영어권이라도 국가마다 관용적으로 쓰는 단어가 달라 번역 후 일부 어휘를 현지식으로 치환한다.
+        // (구글 번역 자체는 영어 변형(en-GB 등)을 별도로 구분해 번역하지 않으므로, 번역 결과에 후처리를 적용)
+        const britishStyleCountries = new Set(['en_gb', 'en_au', 'en_nz', 'en_ie', 'en_za', 'en_in', 'en_sg']);
+        const usToBritishVocab = [
+            [/\bgas station\b/gi, 'petrol station'],
+            [/\btrunk\b/gi, 'boot'],
+            [/\bsidewalk\b/gi, 'pavement'],
+            [/\belevator\b/gi, 'lift'],
+            [/\bparking lot\b/gi, 'car park'],
+            [/\brestroom\b/gi, 'toilet'],
+            [/\bcell ?phone\b/gi, 'mobile phone'],
+            [/\bvacation\b/gi, 'holiday'],
+            [/\bapartment\b/gi, 'flat'],
+            [/\bgarbage\b/gi, 'rubbish'],
+            [/\btrash can\b/gi, 'bin'],
+            [/\bflashlight\b/gi, 'torch'],
+            [/\btruck\b/gi, 'lorry']
+        ];
+        function caseAwareReplace(text, pattern, replacement) {
+            return text.replace(pattern, (match) => {
+                if (match[0] === match[0].toUpperCase() && match[0] !== match[0].toLowerCase()) {
+                    return replacement.charAt(0).toUpperCase() + replacement.slice(1);
+                }
+                return replacement;
+            });
+        }
+        function localizeEnglishVocab(text, countryId) {
+            if (!britishStyleCountries.has(countryId)) return text;
+            let result = text;
+            usToBritishVocab.forEach(([pattern, replacement]) => { result = caseAwareReplace(result, pattern, replacement); });
+            return result;
+        }
+
+        // 기기에 설치된 여러 TTS 음성 중, 해당 언어의 더 자연스러운(네트워크 기반) 음성을 우선 선택
+        let cachedVoices = [];
+        function refreshVoiceCache() { cachedVoices = window.speechSynthesis.getVoices() || []; }
+        if ('speechSynthesis' in window) { refreshVoiceCache(); window.speechSynthesis.onvoiceschanged = refreshVoiceCache; }
+        // 폰에 목소리가 없는 말 → 비슷한 말 목소리로 (우즈베크어는 같은 튀르크어인 터키어, 카자흐어·몽골어는 같은 키릴 문자인 러시아어)
+        function pickBestVoice(langCode) {
+            if (!cachedVoices.length) return null;
+            const exact = cachedVoices.filter(v => v.lang.toLowerCase() === langCode.toLowerCase());
+            const base = langCode.split('-')[0].toLowerCase();
+            const baseMatch = cachedVoices.filter(v => v.lang.toLowerCase().startsWith(base));
+            const pool = exact.length ? exact : baseMatch;
+            if (!pool.length) return null;
+            const networkVoice = pool.find(v => v.localService === false);
+            return networkVoice || pool[0];
+        }
+
+        // ---- 휴대폰 뒤로가기(<): 앱 종료 대신 앱 내 이전 화면으로 이동 ----
+        // 일부 기기(안드로이드 웹뷰 등)는 history.pushState가 간헐적으로 누락되거나, 뒤로가기 한 번에
+        // 실제 history가 2단계 이상 소비되는 경우가 있어, 여유 버퍼(SENTINEL_BUFFER)를 유지해 흡수한다.
+        // 화면이 열려있는 동안은 계속 버퍼를 채워두고, 완전히 홈으로 돌아오면 더 이상 채우지 않아 종료가 가능해진다.
+        const SENTINEL_BUFFER = 6, SENTINEL_MAX = 30;
+        let sentinelCount = 0, toastTimer = null, lastPopTime = 0;
+        // 크롬·삼성인터넷은 '화면을 터치하지 않고 쌓은 뒤로가기 칸'을 무시하고 바로 앱을 종료시킨다.
+        // 그래서 일반 브라우저에서는 화면을 터치할 때마다 한 칸씩만 쌓고, 카카오톡 같은 앱 안 화면에서는 기존처럼 자동으로 채운다.
+        const IN_APP_VIEW = /; wv\)|KAKAOTALK|NAVER\(inapp|DaumApps/i.test(navigator.userAgent);
+        function pushSentinel() {
+            sentinelCount++;
+            try { history.pushState({ app: 'top', n: sentinelCount }, '', location.pathname + location.search + '#s' + sentinelCount); }
+            catch (e) { try { history.pushState({ app: 'top', n: sentinelCount }, ''); } catch (e2) { logNav('pushState 실패: ' + e2.message); } }
+        }
+        function ensureSentinel(mode) {
+            if (!IN_APP_VIEW && mode !== 'init') return;
+            while (sentinelCount < SENTINEL_BUFFER) pushSentinel();
+        }
+        document.addEventListener('click', () => { if (!IN_APP_VIEW && sentinelCount < SENTINEL_MAX) pushSentinel(); }, true);
+        function anyLayerOpen() {
+            const $ = id => document.getElementById(id);
+            return $('category-popup').style.display === 'flex'
+                || $('side-menu').classList.contains('active')
+                || $('phrase-editor').style.display === 'flex'
+                || $('tour-editor').style.display === 'flex'
+                || $('display-overlay').style.display === 'flex'
+                || $('translator-view').style.display === 'flex'
+                || $('greet-view').style.display === 'flex' || $('greet-editor').style.display === 'flex'
+                || $('tour-view').style.display === 'flex'
+                || !$('phrase-view').classList.contains('hidden');
+        }
+        function showToast(msg) { const el = document.getElementById('toast'); el.innerText = msg; el.style.display = 'block'; clearTimeout(toastTimer); toastTimer = setTimeout(() => { el.style.display = 'none'; }, 2000); }
+        function openCategoryPopup() { ensureSentinel(3); document.getElementById('category-popup').style.display = 'flex'; }
+        function closeCategoryPopup() { document.getElementById('category-popup').style.display = 'none'; }
+        function selectCategory(c) { curC = c; selectedPhraseIdx = -1; renderTabs(); renderPhrases(); closeCategoryPopup(); }
+        function closeTopLayer() {
+            const $ = id => document.getElementById(id);
+            if ($('category-popup').style.display === 'flex') { closeCategoryPopup(); return 'category-popup'; }
+            if ($('side-menu').classList.contains('active')) { toggleMenu(); return 'side-menu'; }
+            if ($('words-editor').style.display === 'flex') { closeWords(); return 'words-editor'; }
+            if ($('phrase-editor').style.display === 'flex') { closePhraseEditor(); return 'phrase-editor'; }
+            if ($('tour-editor').style.display === 'flex') { closeTourEditor(); return 'tour-editor'; }
+            if ($('display-overlay').style.display === 'flex') { closeDisplay(); return 'display-overlay'; }
+            if ($('greet-editor').style.display === 'flex') { closeGreetEditor(); return 'greet-editor'; }
+            if ($('greet-view').style.display === 'flex') { closeGreet(); return 'greet-view'; }
+            if ($('translator-view').style.display === 'flex') { closeTranslator(); return 'translator-view'; }
+            if ($('tour-view').style.display === 'flex') {
+                if ($('tour-search-input-container').style.display === 'flex') { toggleTourSearch(); return 'tour-search'; }
+                closeTour(); return 'tour-view';
+            }
+            if (!$('phrase-view').classList.contains('hidden')) {
+                if ($('search-input-container').style.display === 'flex') { toggleSearch(); return 'phrase-search'; }
+                goHome(); return 'phrase-view';
+            }
+            return false;
+        }
+        // ---- 임시 진단용 화면 로그: 뒤로가기 문제 원인 파악 후 제거할 예정 ----
+        const NAV_LOG_KEY = 'taxi_v10_navlog';
+        function logNav(msg) {
+            // 진단 로그는 어떤 경우에도 실제 내비게이션 동작을 방해하면 안 되므로 실패를 전부 무시한다.
+            // 뒤로가기 중 앱이 그대로 꺼져버리는 경우에도 다음에 열었을 때 볼 수 있도록 localStorage에도 남긴다.
+            try {
+                const saved = JSON.parse(localStorage.getItem(NAV_LOG_KEY) || '[]');
+                saved.push(`${new Date().toTimeString().slice(0,8)} ${msg}`);
+                while (saved.length > 30) saved.shift();
+                localStorage.setItem(NAV_LOG_KEY, JSON.stringify(saved));
+            } catch (e) { /* 저장 실패는 무시 */ }
+        }
+        function showSavedNavLog() {
+            try {
+                const saved = JSON.parse(localStorage.getItem(NAV_LOG_KEY) || '[]');
+                if (!saved.length) return;
+                let box = document.getElementById('nav-debug');
+                if (!box) {
+                    box = document.createElement('div');
+                    box.id = 'nav-debug';
+                    box.style.cssText = 'position:fixed;left:4px;bottom:4px;z-index:99999;max-width:92vw;max-height:30vh;overflow:auto;background:rgba(0,0,0,0.85);color:#7CFC98;font:10px/1.4 monospace;padding:6px 8px;border-radius:6px;white-space:pre-wrap;pointer-events:none;';
+                    (document.body || document.documentElement).appendChild(box);
+                }
+                const header = document.createElement('div');
+                header.textContent = '--- 이전 세션 로그 (앱을 새로 열었을 때 자동 표시) ---';
+                header.style.color = '#ffd166';
+                box.appendChild(header);
+                saved.forEach(m => { const l = document.createElement('div'); l.textContent = m; box.appendChild(l); });
+            } catch (e) { /* 무시 */ }
+        }
+        window.addEventListener('pagehide', e => logNav(`PAGEHIDE persisted=${e.persisted}`));
+        window.addEventListener('beforeunload', () => logNav('BEFOREUNLOAD'));
+        window.addEventListener('popstate', () => {
+            sentinelCount = Math.max(0, sentinelCount - 1);
+            // 일부 기기(안드로이드 제스처 뒤로가기 등)는 한 번의 물리적 뒤로가기에 popstate가 두 번 연속 발생함.
+            // 짧은 시간 안에 또 들어온 이벤트는 '가짜 중복'으로 보고 화면은 건드리지 않은 채 버퍼만 복구한다.
+            const now = Date.now();
+            const gap = lastPopTime ? now - lastPopTime : null;
+            if (gap !== null && gap < 350) { ensureSentinel(); logNav(`dup +${gap}ms 무시 buf=${sentinelCount}`); return; }
+            lastPopTime = now;
+            const closed = closeTopLayer();
+            ensureSentinel(); // 국기 화면에서도 다시 채워서 뒤로가기로 종료되지 않게 함
+            logNav(`${gap===null?'start':'+'+gap+'ms'} ${closed ? 'close[' + closed + ']' : 'HOME(머무름)'} buf=${sentinelCount}${IN_APP_VIEW ? ' 앱안' : ''}`);
+        });
+        // ---- 통역 중 다른 앱으로 전환했다가 돌아오면, 끊긴 문장의 맨 앞부터 이어서 재생 ----
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState !== 'visible' || !resumeCtx) return;
+            if (document.getElementById('display-overlay').style.display !== 'flex') { resumeCtx = null; return; }
+            if (window.speechSynthesis.speaking) return; // 안 끊기고 계속 재생 중이면 그대로 둔다
+            const { fullText, lang, offset } = resumeCtx;
+            const sentences = splitSentences(fullText);
+            let resumeStart = 0;
+            for (const sent of sentences) { if (sent.start <= offset) resumeStart = sent.start; else break; }
+            if (resumeStart >= fullText.length) { resumeCtx = null; return; }
+            speak(fullText.slice(resumeStart), lang, resumeStart, fullText);
+        });
+        let phraseEditIdx = -1, tourEditIdx = -1;
+
+        // ---- 선택된 나라 기억: 국기 화면 맨 위 버튼으로 바로 메뉴 화면 복귀 ----
+        function findCountry(id) { return majorLangs.concat(otherLangs).find(c => c.id === id); }
+        function renderLastCountry() {
+            const c = findCountry(curL), btn = document.getElementById('last-country-btn');
+            if (!c) { btn.style.display = 'none'; return; }
+            document.getElementById('last-country-flag').innerText = c.flag; document.getElementById('last-country-name').innerText = c.name; btn.style.display = 'flex';
+        }
+        // ---- 인사말: 선택한 나라 말 + 한글 발음, 누르면 그 나라 발음으로 읽어줌 ----
+        const GREET_DEFAULT = ["안녕하세요", "감사합니다", "안녕히 가세요", "멋진 여행 되시기를"];
+        const GREET_PRON = {"en": {"안녕하세요": ["Hello", "헬로"], "감사합니다": ["Thank you", "땡큐"], "안녕히 가세요": ["Goodbye", "굿바이"], "멋진 여행 되시기를": ["Have a nice trip!", "해브 어 나이스 트립"]}, "ja": {"안녕하세요": ["こんにちは", "곤니치와"], "감사합니다": ["ありがとうございます", "아리가토 고자이마스"], "안녕히 가세요": ["さようなら", "사요나라"], "멋진 여행 되시기를": ["良い旅を！", "요이 타비오"]}, "zh-CN": {"안녕하세요": ["你好", "니하오"], "감사합니다": ["谢谢", "셰셰"], "안녕히 가세요": ["再见", "짜이찌엔"], "멋진 여행 되시기를": ["祝你旅途愉快！", "주 니 뤼투 위콰이"]}, "zh-TW": {"안녕하세요": ["你好", "니하오"], "감사합니다": ["謝謝", "셰셰"], "안녕히 가세요": ["再見", "짜이찌엔"], "멋진 여행 되시기를": ["祝你旅途愉快！", "주 니 뤼투 위콰이"]}, "zh-HK": {"안녕하세요": ["你好", "네이호우"], "감사합니다": ["多謝", "또제"], "안녕히 가세요": ["再見", "조이긴"], "멋진 여행 되시기를": ["祝你旅途愉快！", "죽 네이 로위토우 유파이"]}, "vi": {"안녕하세요": ["Xin chào", "씬 짜오"], "감사합니다": ["Cảm ơn", "깜 언"], "안녕히 가세요": ["Tạm biệt", "땀 비엣"], "멋진 여행 되시기를": ["Chúc bạn có chuyến đi vui vẻ!", "쭉 반 꼬 쭈옌 디 부이 베"]}, "th": {"안녕하세요": ["สวัสดีครับ", "사왓디 크랍"], "감사합니다": ["ขอบคุณครับ", "컵쿤 크랍"], "안녕히 가세요": ["ลาก่อนครับ", "라 꺼은 크랍"], "멋진 여행 되시기를": ["ขอให้เที่ยวให้สนุกนะครับ", "커 하이 티여우 하이 사눅 나 크랍"]}, "tl": {"안녕하세요": ["Kumusta po", "쿠무스타 포"], "감사합니다": ["Salamat po", "살라맛 포"], "안녕히 가세요": ["Paalam po", "파알람 포"], "멋진 여행 되시기를": ["Ingat po sa biyahe!", "잉앗 포 사 비야헤"]}, "ms": {"안녕하세요": ["Selamat datang", "슬라맛 다탕"], "감사합니다": ["Terima kasih", "뜨리마 까시"], "안녕히 가세요": ["Selamat tinggal", "슬라맛 띵갈"], "멋진 여행 되시기를": ["Selamat bercuti!", "슬라맛 버르추티"]}, "id": {"안녕하세요": ["Halo", "할로"], "감사합니다": ["Terima kasih", "뜨리마 까시"], "안녕히 가세요": ["Sampai jumpa", "삼빠이 줌빠"], "멋진 여행 되시기를": ["Selamat berlibur!", "슬라맛 버를리부르"]}, "my": {"안녕하세요": ["မင်္ဂလာပါ", "밍글라바"], "감사합니다": ["ကျေးဇူးတင်ပါတယ်", "쩨주 띤바대"], "안녕히 가세요": ["နောက်မှတွေ့မယ်", "나욱마 뛔메"], "멋진 여행 되시기를": ["ခရီးစဉ် ပျော်ရွှင်ပါစေ", "카이세인 뾰쉰바제"]}, "de": {"안녕하세요": ["Hallo", "할로"], "감사합니다": ["Danke schön", "당케 쇤"], "안녕히 가세요": ["Auf Wiedersehen", "아우프 비더제엔"], "멋진 여행 되시기를": ["Gute Reise!", "구테 라이제"]}, "fr": {"안녕하세요": ["Bonjour", "봉주르"], "감사합니다": ["Merci beaucoup", "메르시 보꾸"], "안녕히 가세요": ["Au revoir", "오 르부아"], "멋진 여행 되시기를": ["Bon voyage !", "봉 부아야주"]}, "es": {"안녕하세요": ["Hola", "올라"], "감사합니다": ["Muchas gracias", "무차스 그라시아스"], "안녕히 가세요": ["Adiós", "아디오스"], "멋진 여행 되시기를": ["¡Buen viaje!", "부엔 비아헤"]}, "it": {"안녕하세요": ["Buongiorno", "부온조르노"], "감사합니다": ["Grazie mille", "그라치에 밀레"], "안녕히 가세요": ["Arrivederci", "아리베데르치"], "멋진 여행 되시기를": ["Buon viaggio!", "부온 비아조"]}, "nl": {"안녕하세요": ["Hallo", "할로"], "감사합니다": ["Dank u wel", "당크 위 벨"], "안녕히 가세요": ["Tot ziens", "톳 진스"], "멋진 여행 되시기를": ["Goede reis!", "후더 레이스"]}, "pt": {"안녕하세요": ["Olá", "올라"], "감사합니다": ["Obrigado", "오브리가두"], "안녕히 가세요": ["Tchau", "차우"], "멋진 여행 되시기를": ["Boa viagem!", "보아 비아장"]}, "pl": {"안녕하세요": ["Dzień dobry", "지엔 도브리"], "감사합니다": ["Dziękuję", "지엥쿠예"], "안녕히 가세요": ["Do widzenia", "도 비제니아"], "멋진 여행 되시기를": ["Udanej podróży!", "우다네이 포드루지"]}, "cs": {"안녕하세요": ["Dobrý den", "도브리 덴"], "감사합니다": ["Děkuji", "데꾸이"], "안녕히 가세요": ["Na shledanou", "나 스흘레다노우"], "멋진 여행 되시기를": ["Šťastnou cestu!", "슈짜스트노우 체스투"]}, "sv": {"안녕하세요": ["Hej", "헤이"], "감사합니다": ["Tack så mycket", "탁 소 뮈케"], "안녕히 가세요": ["Hej då", "헤이 도"], "멋진 여행 되시기를": ["Trevlig resa!", "트레블리그 레사"]}, "tr": {"안녕하세요": ["Merhaba", "메르하바"], "감사합니다": ["Teşekkür ederim", "테셰퀴르 에데림"], "안녕히 가세요": ["Güle güle", "귈레 귈레"], "멋진 여행 되시기를": ["İyi yolculuklar!", "이이 욜줄루클라르"]}, "ru": {"안녕하세요": ["Здравствуйте", "즈드라스트부이쩨"], "감사합니다": ["Спасибо", "스파시바"], "안녕히 가세요": ["До свидания", "다 스비다니야"], "멋진 여행 되시기를": ["Приятного путешествия!", "프리야트나바 푸티셰스트비야"]}, "mn": {"안녕하세요": ["Сайн байна уу", "사인 배노"], "감사합니다": ["Баярлалаа", "바야르랄라"], "안녕히 가세요": ["Баяртай", "바야르태"], "멋진 여행 되시기를": ["Сайхан аялаарай!", "새항 아얄라래"]}, "uz": {"안녕하세요": ["Assalomu alaykum", "앗살로무 알라이쿰"], "감사합니다": ["Rahmat", "라흐맛"], "안녕히 가세요": ["Xayr", "하이르"], "멋진 여행 되시기를": ["Yaxshi sayohat!", "야흐시 사요하트"]}, "kk": {"안녕하세요": ["Сәлеметсіз бе", "셀레메트시즈 베"], "감사합니다": ["Рахмет", "라흐메트"], "안녕히 가세요": ["Сау болыңыз", "사우 볼릉으즈"], "멋진 여행 되시기를": ["Сапарыңыз сәтті болсын!", "사파르응으즈 세티 볼슨"]}, "ar": {"안녕하세요": ["مرحبا", "마르하반"], "감사합니다": ["شكرا جزيلا", "슈크란 자질란"], "안녕히 가세요": ["مع السلامة", "마아 살라마"], "멋진 여행 되시기를": ["رحلة سعيدة", "리흘라 사이다"]}, "hi": {"안녕하세요": ["नमस्ते", "나마스떼"], "감사합니다": ["धन्यवाद", "단야바드"], "안녕히 가세요": ["अलविदा", "알비다"], "멋진 여행 되시기를": ["आपकी यात्रा शुभ हो!", "아쁘끼 야뜨라 슈브 호"]}, "no": {"안녕하세요": ["Hei", "하이"], "감사합니다": ["Tusen takk", "투센 탁"], "안녕히 가세요": ["Ha det bra", "하 데 브라"], "멋진 여행 되시기를": ["God tur!", "구 투르"]}, "ne": {"안녕하세요": ["नमस्ते", "나마스떼"], "감사합니다": ["धन्यवाद", "단냐바드"], "안녕히 가세요": ["फेरि भेटौँला", "페리 베타운라"], "멋진 여행 되시기를": ["यात्रा शुभ रहोस्!", "야뜨라 숩 라호스"]}, "da": {"안녕하세요": ["Hej", "하이"], "감사합니다": ["Mange tak", "망에 탁"], "안녕히 가세요": ["Farvel", "파벨"], "멋진 여행 되시기를": ["God rejse!", "고 라이세"]}, "fi": {"안녕하세요": ["Hei", "헤이"], "감사합니다": ["Kiitos", "키토스"], "안녕히 가세요": ["Näkemiin", "내케민"], "멋진 여행 되시기를": ["Hyvää matkaa!", "휘배 마카"]}, "el": {"안녕하세요": ["Γεια σας", "야 사스"], "감사합니다": ["Ευχαριστώ", "에프하리스토"], "안녕히 가세요": ["Αντίο", "안디오"], "멋진 여행 되시기를": ["Καλό ταξίδι!", "칼로 탁시디"]}, "he": {"안녕하세요": ["שלום", "샬롬"], "감사합니다": ["תודה רבה", "토다 라바"], "안녕히 가세요": ["להתראות", "레히트라옷"], "멋진 여행 되시기를": ["נסיעה טובה!", "네시아 토바"]}, "km": {"안녕하세요": ["ជម្រាបសួរ", "쭘리읍 쑤어"], "감사합니다": ["អរគុណ", "어꾼"], "안녕히 가세요": ["លាសិនហើយ", "리어 썬 하으이"], "멋진 여행 되시기를": ["សូមឱ្យដំណើរល្អ!", "쏨 아오이 덤나으 러어"]}, "bn": {"안녕하세요": ["আসসালামু আলাইকুম", "앗살라무 알라이쿰"], "감사합니다": ["ধন্যবাদ", "돈노바드"], "안녕히 가세요": ["আবার দেখা হবে", "아바르 데카 호베"], "멋진 여행 되시기를": ["শুভ যাত্রা!", "슈보 자트라"]}, "ur": {"안녕하세요": ["السلام علیکم", "앗살라무 알라이쿰"], "감사합니다": ["شکریہ", "슈크리야"], "안녕히 가세요": ["خدا حافظ", "쿠다 하피즈"], "멋진 여행 되시기를": ["سفر مبارک!", "사파르 무바라크"]}, "si": {"안녕하세요": ["ආයුබෝවන්", "아유보완"], "감사합니다": ["ස්තූතියි", "스뚜띠이"], "안녕히 가세요": ["ගිහින් එන්නම්", "기힌 엔남"], "멋진 여행 되시기를": ["සුභ ගමන්!", "수바 가만"]}, "uk": {"안녕하세요": ["Добрий день", "도브리 덴"], "감사합니다": ["Дякую", "댜쿠유"], "안녕히 가세요": ["До побачення", "도 포바체냐"], "멋진 여행 되시기를": ["Щасливої дороги!", "샤슬리보이 도로히"]}, "hu": {"안녕하세요": ["Jó napot", "요 너포트"], "감사합니다": ["Köszönöm", "쾨쇠놈"], "안녕히 가세요": ["Viszontlátásra", "비손틀라타쉬러"], "멋진 여행 되시기를": ["Jó utat!", "요 우터트"]}, "ro": {"안녕하세요": ["Bună ziua", "부너 지와"], "감사합니다": ["Mulțumesc", "물추메스크"], "안녕히 가세요": ["La revedere", "라 레베데레"], "멋진 여행 되시기를": ["Drum bun!", "드룸 분"]}}; // [그 나라 글, 한글 발음]
+        let greetDB = (() => { try { const v = JSON.parse(localStorage.getItem('taxi_v10_greet')); if (Array.isArray(v)) return v; } catch (e) {} return GREET_DEFAULT.slice(); })();
+        function saveGreet() { try { localStorage.setItem('taxi_v10_greet', JSON.stringify(greetDB)); } catch (e) {} }
+        // 기사님이 직접 적은 한글 발음 (나라|인사말 → 발음). 기본 발음보다 우선
+        let greetPronDB = (() => { try { return JSON.parse(localStorage.getItem('taxi_v10_greetpron')) || {}; } catch (e) { return {}; } })();
+        function saveGreetPron() { try { localStorage.setItem('taxi_v10_greetpron', JSON.stringify(greetPronDB)); } catch (e) {} }
+        function greetPronOf(code, ko) { const k = code + '|' + ko; if (greetPronDB[k] !== undefined) return greetPronDB[k]; const f = (GREET_PRON[code] || {})[ko]; return f ? f[1] : ''; }
+        function editGreetPron(i) {
+            const code = langMap[curL], ko = greetDB[i], cur = greetPronOf(code, ko);
+            const v = prompt(`"${ko}" 의 한글 발음을 적어주세요\n(🔊 소리를 듣고 들리는 대로 적으면 됩니다)`, cur);
+            if (v === null) return;
+            greetPronDB[code + '|' + ko] = v.trim(); saveGreetPron(); renderGreet();
+        }
+        const greetCache = {};
+        function escHtml(t) { return String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+        function speakGreet(t) {
+            try { window.speechSynthesis.cancel(); const code = getLangCode(curL); const u = new SpeechSynthesisUtterance(t); u.lang = code; u.rate = 0.8; const v = pickBestVoice(code); if (v) u.voice = v; /* 목소리가 없으면 엉뚱한 억양으로 읽지 않음 */ window.speechSynthesis.speak(u); } catch (e) {}
+        }
+        function openGreet() {
+            const c = findCountry(curL); if (!c) return;
+            ensureSentinel(3);
+            document.getElementById('greet-title').innerText = '👋 ' + c.flag + ' ' + c.name;
+            document.getElementById('greet-lang').value = curL;
+            document.getElementById('greet-view').style.display = 'flex';
+            renderGreet();
+        }
+        function greetLangChanged() { const id = document.getElementById('greet-lang').value; syncCountryFromTr(id); document.getElementById('tr-lang').value = id; openGreet(); } // 인사말 화면에서 나라를 바꾸면 앱 전체 나라도 같이 바뀜
+        function closeGreet() { document.getElementById('greet-view').style.display = 'none'; try { window.speechSynthesis.cancel(); } catch (e) {} }
+        // 인사말 화면: 한 번 누르면 고르기(옆줄 표시), 한 번 더 누르면 읽기. 아래 줄 버튼으로 추가·이동·수정·삭제
+        let selectedGreetIdx = -1;
+        function selectGreet(i) { if (selectedGreetIdx === i) speakGreetAt(i); else { selectedGreetIdx = i; renderGreet(); } }
+        function greetAdd() { const v = (prompt('추가할 인사말 (한국어)') || '').trim(); if (!v) return; greetDB.push(v); saveGreet(); selectedGreetIdx = greetDB.length - 1; renderGreet(); }
+        function greetEdit() { if (selectedGreetIdx < 0) { showToast('먼저 문장을 고르세요'); return; } const v = (prompt('인사말 수정', greetDB[selectedGreetIdx]) || '').trim(); if (!v) return; greetDB[selectedGreetIdx] = v; saveGreet(); renderGreet(); }
+        function greetDelete() { if (selectedGreetIdx < 0) { showToast('먼저 문장을 고르세요'); return; } if (!confirm(`"${greetDB[selectedGreetIdx]}" 를 삭제할까요?`)) return; greetDB.splice(selectedGreetIdx, 1); selectedGreetIdx = -1; saveGreet(); renderGreet(); }
+        function greetMove(d) { const i = selectedGreetIdx, j = i + d; if (i < 0 || j < 0 || j >= greetDB.length) return; [greetDB[i], greetDB[j]] = [greetDB[j], greetDB[i]]; selectedGreetIdx = j; saveGreet(); renderGreet(); }
+        function renderGreet() {
+            const box = document.getElementById('greet-list'), code = langMap[curL];
+            if (!code || code === 'ko') { box.innerHTML = '<div style="text-align:center; padding:50px; color:var(--text-dim);">한국을 선택하면 인사말이 없습니다.</div>'; return; }
+            const table = GREET_PRON[code] || {};
+            box.innerHTML = greetDB.map((ko, i) => {
+                const fixed = table[ko], key = code + '|' + ko, fx = fixed ? fixed[0] : greetCache[key];
+                if (!fixed && fx === undefined) fetchGreet(code, ko);
+                return `<div class="greet-row ${i === selectedGreetIdx ? 'selected' : ''}" onclick="selectGreet(${i})"><div style="flex:1; min-width:0;"><div class="greet-ko">${escHtml(ko)}</div><div class="greet-fx">${fx === undefined ? '번역 중...' : escHtml(fx || '(통신 오류)')}</div><div class="greet-pr">${escHtml(greetPronOf(code, ko)) || '<span style="color:var(--text-faint); font-size:15px;">발음 없음 → ✏️ 눌러 적기</span>'}</div></div><span class="greet-play" onclick="event.stopPropagation(); speakGreetAt(${i})">🔊</span><span onclick="event.stopPropagation(); editGreetPron(${i})" style="flex:none; width:44px; height:44px; border-radius:50%; background:var(--surface-2); border:1px solid var(--hairline-soft); display:flex; align-items:center; justify-content:center; font-size:20px;">✏️</span></div>`;
+            }).join('') || '<div style="text-align:center; padding:50px; color:var(--text-dim);">메뉴 → 인사말 넣기에서 인사말을 넣어주세요.</div>';
+        }
+        function speakGreetAt(i) { const code = langMap[curL], ko = greetDB[i], fixed = (GREET_PRON[code] || {})[ko], fx = fixed ? fixed[0] : greetCache[code + '|' + ko]; if (fx) speakGreet(fx); }
+        async function fetchGreet(code, ko) {
+            const key = code + '|' + ko; greetCache[key] = undefined;
+            if (fetchGreet.busy && fetchGreet.busy[key]) return; (fetchGreet.busy = fetchGreet.busy || {})[key] = true;
+            try { const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=ko&tl=${code}&dt=t&q=${encodeURIComponent(ko)}`); const data = await res.json(); greetCache[key] = data[0].map(p => p[0]).join(''); }
+            catch (e) { greetCache[key] = ''; }
+            delete fetchGreet.busy[key];
+            if (document.getElementById('greet-view').style.display === 'flex' && langMap[curL] === code) renderGreet();
+        }
+        function openGreetEditor() { ensureSentinel(3); document.getElementById('greet-editor').style.display = 'flex'; renderGreetEditor(); }
+        function closeGreetEditor() { document.getElementById('greet-editor').style.display = 'none'; document.getElementById('greet-new').blur(); }
+        function renderGreetEditor() {
+            document.getElementById('greet-edit-list').innerHTML = greetDB.map((ko, i) => `<div class="greet-edit-row"><span style="flex:1; min-width:0;">${escHtml(ko)}</span><button onclick="deleteGreet(${i})" style="flex:none; border:none; border-radius:12px; padding:10px 14px; font-size:17px; font-weight:800; background:var(--ruby); color:#fff;">삭제</button></div>`).join('');
+        }
+        function addGreet() { const el = document.getElementById('greet-new'), v = el.value.trim(); if (!v) return; greetDB.push(v); saveGreet(); el.value = ''; renderGreetEditor(); }
+        function deleteGreet(i) { if (!confirm(`"${greetDB[i]}" 를 삭제할까요?`)) return; greetDB.splice(i, 1); saveGreet(); renderGreetEditor(); }
+        // 국기 화면 오른쪽 위 ⭐: 선택된 나라 말로 '좋은 평가 부탁' 인사 바로 통역
+        function sayRateRequest() {
+            if (!findCountry(curL) || curL === 'ko') { showToast('먼저 나라를 선택해 주세요'); return; }
+            translateAndOpen('즐거운 여행 되세요. 괜찮으셨다면 좋은 평가 부탁드려요.');
+        }
+        function openLastCountry() { const c = findCountry(curL); if (c) showPhraseView(c.id, c.name); }
+        function init() { ensureSentinel('init'); setTimeout(() => logNav('버전 1005-C ' + (IN_APP_VIEW ? '앱안화면' : '일반브라우저')), 0); buildTrLangOptions(); initFab(); renderCountryLists(majorLangs, otherLangs); try { curL = localStorage.getItem('taxi_v10_lastlang') || ''; } catch (e) {} renderLastCountry(); }
+        function renderCountryLists(majors, others) {
+            const majorDiv = document.getElementById('major-list'); majorDiv.innerHTML = majors.map(c => `<div class="item-btn major-btn" onclick="showPhraseView('${c.id}', '${c.name}')"><span class="flag">${c.flag}</span><span class="name">${c.name.replace('(', '<wbr>(')}</span></div>`).join('');
+            const otherDiv = document.getElementById('other-list'); otherDiv.innerHTML = others.map(c => `<div class="item-btn" onclick="showPhraseView('${c.id}', '${c.name}')"><span class="flag">${c.flag}</span><span class="name">${c.name.replace('(', '<wbr>(')}</span></div>`).join('');
+            document.getElementById('major-section').style.display = majors.length ? 'block' : 'none'; document.getElementById('other-section').style.display = others.length ? 'block' : 'none';
+        }
+        function filterCountries(val) { if (!val.trim()) { renderCountryLists(majorLangs, otherLangs); return; } const fMajors = majorLangs.filter(c => c.name.includes(val)); const fOthers = otherLangs.filter(c => c.name.includes(val)); renderCountryLists(fMajors, fOthers); }
+        function toggleMenu() { const m = document.getElementById('side-menu'); m.classList.toggle('active'); if (m.classList.contains('active')) ensureSentinel(3); }
+        function goHome() { document.getElementById('rate-btn').style.display = 'flex'; document.getElementById('menu-btn').style.display = ''; document.getElementById('head-greet-btn').style.display = 'flex'; closeCategoryPopup(); closeTranslator(); document.getElementById('phrase-view').classList.add('hidden'); document.getElementById('country-view').classList.remove('hidden'); document.getElementById('header-title').innerText = "ALADIN TAXI"; document.getElementById('tour-btn').style.display = 'none'; if (document.getElementById('search-input-container').style.display === 'flex') toggleSearch(); document.getElementById('search-trigger').style.display = 'none'; isTourMode = false; closeDisplay(); closeTour(); document.getElementById('country-search').value = ''; filterCountries(''); }
+        function goBack() { if (!closeTopLayer()) goHome(); }
+        function showPhraseView(id, name) { ensureSentinel(3); document.getElementById('rate-btn').style.display = 'flex'; document.getElementById('menu-btn').style.display = 'none'; document.getElementById('head-greet-btn').style.display = 'flex'; curL = id; try { localStorage.setItem('taxi_v10_lastlang', id); } catch (e) {} renderLastCountry(); document.getElementById('country-view').classList.add('hidden'); document.getElementById('phrase-view').classList.remove('hidden'); document.getElementById('header-title').innerText = name; document.getElementById('tour-btn').style.display = 'flex'; document.getElementById('search-trigger').style.display = 'flex'; renderTabs(); renderPhrases(); }
+
+        function toggleSearch() { const trigger = document.getElementById('search-trigger'), container = document.getElementById('search-input-container'), input = document.getElementById('search-input'); if (container.style.display === 'flex') { container.style.display = 'none'; trigger.style.display = 'flex'; isSearchActive = false; input.value = ''; document.getElementById('category-trigger').style.display = 'flex'; document.getElementById('phrase-admin-bar').style.display = 'flex'; renderPhrases(); } else { ensureSentinel(3); container.style.display = 'flex'; trigger.style.display = 'none'; input.focus(); } }
+        function handleSearch(val) { if (!val.trim()) { isSearchActive = false; document.getElementById('category-trigger').style.display = 'flex'; document.getElementById('phrase-admin-bar').style.display = 'flex'; renderPhrases(); return; } isSearchActive = true; document.getElementById('category-trigger').style.display = 'none'; document.getElementById('phrase-admin-bar').style.display = 'none'; searchResults = []; categories.forEach(cat => { (phraseDB[cat] || []).forEach((item, idx) => { if (item.ko.includes(val)) searchResults.push({cat, item, idx}); }); }); renderSearchResults(); }
+        function renderSearchResults() { const area = document.getElementById('phrase-list-area'); let html = `<table class="phrase-table">`; searchResults.forEach((res, i) => { html += `<tr class="phrase-row ${res.idx === selectedPhraseIdx && res.cat === curC ? 'selected' : ''}" onclick="selectSearchPhrase('${res.cat}', ${res.idx}, '${res.item.ko.replace(/'/g, "\\'")}')"><td><small style="color:var(--accent-color)">[${res.cat}]</small> 🇰🇷 ${res.item.ko}</td></tr>`; }); if (searchResults.length === 0) html += `<tr><td style="text-align:center; padding:50px; color:var(--text-dim);">검색 결과가 없습니다.</td></tr>`; area.innerHTML = html + `</table>`; }
+        function selectSearchPhrase(cat, idx, ko) { if (selectedPhraseIdx === idx && curC === cat) { translateAndOpen(ko); } else { curC = cat; selectedPhraseIdx = idx; const searchVal = document.getElementById('search-input').value; handleSearch(searchVal); } }
+
+        function renderTabs() { const nav = document.getElementById('category-nav'); nav.innerHTML = categories.map(c => `<div class="cat-tab ${c === curC ? 'active' : ''}" onclick="selectCategory('${c}')">${c}</div>`).join(''); document.getElementById('category-current').innerText = curC; }
+        function renderPhrases() { if (isSearchActive) return; const area = document.getElementById('phrase-list-area'); const list = phraseDB[curC] || []; let html = `<table class="phrase-table">`; list.forEach((item, i) => { html += `<tr class="phrase-row ${i === selectedPhraseIdx ? 'selected' : ''}" onclick="selectPhrase(${i})"><td>🇰🇷 ${item.ko}</td></tr>`; }); area.innerHTML = html + `</table>`; }
+        function selectPhrase(idx) { if(selectedPhraseIdx === idx) translateAndOpen(phraseDB[curC][idx].ko); else { selectedPhraseIdx = idx; renderPhrases(); } }
+        function movePhrase(dir) { if(selectedPhraseIdx === -1) return; const list = phraseDB[curC], newIdx = selectedPhraseIdx + dir; if (newIdx >= 0 && newIdx < list.length) { [list[selectedPhraseIdx], list[newIdx]] = [list[newIdx], list[selectedPhraseIdx]]; selectedPhraseIdx = newIdx; saveData(); renderPhrases(); } }
+        function openPhraseEditor(idx = -1) { ensureSentinel(3); const targetIdx = idx === -1 ? -1 : selectedPhraseIdx; phraseEditIdx = targetIdx; document.getElementById('edit-phrase-ko').value = targetIdx > -1 ? phraseDB[curC][targetIdx].ko : ""; document.getElementById('phrase-editor').style.display = 'flex'; }
+        function closePhraseEditor() { document.getElementById('phrase-editor').style.display = 'none'; }
+        function savePhraseData() { const ko = document.getElementById('edit-phrase-ko').value; if(!ko) return; if(phraseEditIdx > -1) { phraseDB[curC][phraseEditIdx].ko = ko; } else { if(!phraseDB[curC]) phraseDB[curC] = []; phraseDB[curC].push({ko}); } saveData(); if (isSearchActive) { const searchVal = document.getElementById('search-input').value; handleSearch(searchVal); } else { renderPhrases(); } closePhraseEditor(); }
+        function deletePhrase() { if(selectedPhraseIdx === -1) return; if(confirm("문장을 삭제할까요?")) { phraseDB[curC].splice(selectedPhraseIdx, 1); selectedPhraseIdx = -1; saveData(); if (isSearchActive) { const searchVal = document.getElementById('search-input').value; handleSearch(searchVal); } else { renderPhrases(); } } }
+
+        function openTour(){ ensureSentinel(3); selectedTourIdx = -1; const tc = findCountry(curL); document.getElementById('tour-header-title').innerText = tc && curL !== 'ko' ? tc.name : document.getElementById('header-title').innerText; document.getElementById('tour-view').style.display = 'flex'; renderTour(); }
+        function closeTour(){ document.getElementById('tour-view').style.display = 'none'; document.getElementById('tour-search-input-container').style.display = 'none'; document.getElementById('tour-search-trigger').style.display = 'flex'; document.getElementById('tour-search-input').value = ''; }
+        function toggleTourSearch() { const trig = document.getElementById('tour-search-trigger'), cont = document.getElementById('tour-search-input-container'), input = document.getElementById('tour-search-input'); if (cont.style.display === 'flex') { cont.style.display = 'none'; trig.style.display = 'flex'; input.value = ''; renderTour(); } else { ensureSentinel(3); cont.style.display = 'flex'; trig.style.display = 'none'; input.focus(); } }
+
+        // ---- 리스트 보기: 앞 번호(예: 1-3)는 무시하고 글자만으로 가나다/ABC 오름차순 정렬 ----
+        let tourSortMode = false;
+        try { tourSortMode = localStorage.getItem('taxi_v10_toursort') === '1'; } catch (e) {}
+        function tourText(name) {
+            const s = String(name == null ? '' : name);
+            const t = s.replace(/^\s*(?:[(\[]\s*\d+(?:\s*[-–.~]\s*\d+)*\s*[)\]]\s*|\d+(?:\s*[-–.~]\s*\d+)+\s*[.):\]]?\s*|\d+\s*[.):\]]\s*|\d+\s+)/, '').trim();
+            return t || s.trim();
+        }
+        function toggleTourSort() {
+            tourSortMode = !tourSortMode;
+            try { localStorage.setItem('taxi_v10_toursort', tourSortMode ? '1' : '0'); } catch (e) {}
+            refreshTourList(); document.getElementById('tour-list').scrollTop = 0;
+        }
+        function refreshTourList() { const v = document.getElementById('tour-search-input').value; if (v.trim()) filterTour(v); else renderTour(); }
+        function syncTourSortUi() {
+            document.getElementById('tour-list-btn').classList.toggle('on', tourSortMode);
+            document.querySelector('.tour-admin').classList.toggle('sorted', tourSortMode);
+        }
+        function tourRowsHtml(items, withGrip) {
+            let rows = items.map(t => ({ t, i: tourDB.indexOf(t), label: tourSortMode ? tourText(t.name) : t.name }));
+            if (tourSortMode) rows.sort((a, b) => a.label.localeCompare(b.label, 'ko') || a.i - b.i);
+            const grip = i => `<span class="tour-grip" onpointerdown="tourGripDown(event, ${i})" onpointermove="tourGripMove(event)" onpointerup="tourGripUp(event)" onpointercancel="tourGripCancel(event)" onclick="event.stopPropagation()" oncontextmenu="return false"><i></i></span>`;
+            return rows.map(r => `<div class="tour-row ${r.i === selectedTourIdx ? 'selected' : ''}" onclick="selectTour(${r.i})"><span class="tour-name">${r.label}</span>${withGrip && !tourSortMode ? grip(r.i) : ''}</div>`).join('');
+        }
+        function filterTour(val) {
+            if(!val.trim()) { renderTour(); return; }
+            syncTourSortUi();
+            const listDiv = document.getElementById('tour-list');
+            const filtered = tourDB.filter(t => t.name.includes(val));
+            listDiv.innerHTML = filtered.length ? tourRowsHtml(filtered, false) : `<div style="text-align:center; padding:50px; color:var(--text-dim);">검색 결과가 없습니다.</div>`;
+        }
+        function renderTour() { syncTourSortUi(); document.getElementById('tour-list').innerHTML = tourRowsHtml(tourDB, true); }
+
+        // ---- 맨아래로 ----
+        function moveTourToBottom() { if(selectedTourIdx === -1 || selectedTourIdx >= tourDB.length - 1) return; const item = tourDB.splice(selectedTourIdx, 1)[0]; tourDB.push(item); selectedTourIdx = tourDB.length - 1; saveTour(); const searchInput = document.getElementById('tour-search-input').value; if(searchInput.trim()) { filterTour(searchInput); } else { renderTour(); } const l = document.getElementById('tour-list'); l.scrollTop = l.scrollHeight; }
+
+        // ---- 관광지 꾹 눌러 드래그로 순서 바꾸기 ----
+        let dragState = null;
+        function tourGripDown(e, idx) {
+            e.stopPropagation();
+            if (dragState) return;
+            const grip = e.currentTarget;
+            const st = { idx, curIdx: idx, pointerId: e.pointerId, grip, rowEl: grip.parentElement, list: document.getElementById('tour-list'), startY: e.clientY, lastY: e.clientY, active: false, timer: null, raf: null, rows: [], slot: null, startScroll: 0 };
+            dragState = st;
+            try { grip.setPointerCapture(e.pointerId); } catch (err) {}
+            st.timer = setTimeout(() => beginTourDrag(st), 280);
+        }
+        function tourGripMove(e) {
+            const st = dragState; if (!st) return;
+            st.lastY = e.clientY;
+            if (!st.active) { if (Math.abs(e.clientY - st.startY) > 12) { clearTimeout(st.timer); dragState = null; } return; }
+            e.preventDefault();
+        }
+        function tourGripUp(e) {
+            const st = dragState; if (!st) return;
+            clearTimeout(st.timer);
+            try { st.grip.releasePointerCapture(e.pointerId); } catch (err) {}
+            if (!st.active) { dragState = null; return; }
+            cancelAnimationFrame(st.raf);
+            const from = st.idx, to = st.curIdx;
+            endTourDrag(st);
+            if (to !== from) { const item = tourDB.splice(from, 1)[0]; tourDB.splice(to, 0, item); saveTour(); }
+            selectedTourIdx = to; dragState = null; renderTour();
+        }
+        function tourGripCancel(e) {
+            const st = dragState; if (!st) return;
+            clearTimeout(st.timer);
+            if (st.active) { cancelAnimationFrame(st.raf); endTourDrag(st); }
+            dragState = null;
+        }
+        function beginTourDrag(st) {
+            if (dragState !== st) return;
+            st.active = true;
+            const els = Array.from(st.list.querySelectorAll('.tour-row'));
+            st.rows = els.map(el => ({ el, top: el.offsetTop, h: el.offsetHeight }));
+            st.startScroll = st.list.scrollTop;
+            st.rows.forEach((r, i) => { r.el.style.transition = i === st.idx ? 'none' : 'transform 0.15s ease'; });
+            st.rowEl.classList.add('dragging');
+            st.slot = document.createElement('div'); st.slot.id = 'drag-slot'; st.list.appendChild(st.slot);
+            if (navigator.vibrate) navigator.vibrate(18);
+            updateTourDrag(st);
+            st.raf = requestAnimationFrame(() => tourDragTick(st));
+        }
+        function tourDragTick(st) {
+            if (dragState !== st || !st.active) return;
+            const rect = st.list.getBoundingClientRect(), edge = 90, navH = 84, bottom = rect.bottom - navH;
+            let v = 0;
+            if (st.lastY < rect.top + edge) v = -Math.ceil((rect.top + edge - st.lastY) / edge * 18);
+            else if (st.lastY > bottom - edge) v = Math.ceil((st.lastY - (bottom - edge)) / edge * 18);
+            if (v) st.list.scrollTop += v;
+            updateTourDrag(st);
+            st.raf = requestAnimationFrame(() => tourDragTick(st));
+        }
+        function updateTourDrag(st) {
+            const rows = st.rows, d = rows[st.idx];
+            const dy = (st.lastY - st.startY) + (st.list.scrollTop - st.startScroll);
+            const last = rows[rows.length - 1];
+            const ty = Math.max(-d.top - d.h / 2, Math.min(last.top + last.h - d.top - d.h / 2, dy)); // 양 끝에서 맨 위/맨 아래 칸까지 들어가도록 반 칸 여유
+            st.rowEl.style.transform = `translateY(${ty}px)`;
+            const center = d.top + d.h / 2 + ty;
+            let n = 0;
+            rows.forEach((r, i) => { if (i !== st.idx && r.top + r.h / 2 < center) n++; });
+            st.curIdx = n;
+            rows.forEach((r, i) => {
+                if (i === st.idx) return;
+                let sh = 0;
+                if (st.idx < n && i > st.idx && i <= n) sh = -d.h; else if (st.idx > n && i >= n && i < st.idx) sh = d.h;
+                r.el.style.transform = sh ? `translateY(${sh}px)` : '';
+            });
+            const slotTop = n <= st.idx ? rows[n].top : rows[n].top + rows[n].h - d.h;
+            st.slot.style.top = slotTop + 'px'; st.slot.style.height = d.h + 'px';
+        }
+        function endTourDrag(st) {
+            st.rows.forEach(r => { r.el.style.transform = ''; r.el.style.transition = ''; });
+            st.rowEl.classList.remove('dragging');
+            if (st.slot) st.slot.remove();
+        }
+
+        // ---- 번역기 (플로팅 버튼 → 번역할 텍스트 입력 화면) ----
+        function buildTrLangOptions() {
+            // 나라 고르는 목록: 첫 화면과 같은 순서(영어권 국가 → 비영어권 국가), "🇨🇦 캐나다 (Canada)"처럼 한국어(영어)로 보여 줌
+            // 고른 뒤 칸에는 승객이 보는 영어 이름(🇨🇦 Canada)만 표시
+            const en = c => `${c.flag} ${enNames[c.id] || c.name}`, ko = c => `${c.flag} ${c.name.replace(/\(.*\)/, '').trim()} (${(enNames[c.id] || c.name).replace(' (', ' · ').replace(')', '')})`; // 괄호 안은 승객이 알아보도록 영어
+            const opt = c => `<option value="${c.id}" data-en="${en(c)}" data-ko="${ko(c)}">${c.flag} ${ko(c)}</option>`;
+            const gko = c => `<option value="${c.id}">${c.flag} ${c.name}</option>`; // 인사말 화면 나라 바꾸기 목록 (기사님용 한국어 이름)
+            document.getElementById('greet-lang').innerHTML = `<optgroup label="영어권 국가">${majorLangs.map(gko).join('')}</optgroup><optgroup label="비영어권 국가">${otherLangs.filter(c => c.id !== 'ko').map(gko).join('')}</optgroup>`;
+            document.getElementById('tr-lang').innerHTML = `<optgroup label="영어권 국가">${majorLangs.map(opt).join('')}</optgroup><optgroup label="비영어권 국가">${otherLangs.filter(c => c.id !== 'ko').map(opt).join('')}</optgroup>`;
+        }
+        function trLangListKo(on) { [...document.getElementById('tr-lang').options].forEach(o => { o.text = on ? o.dataset.ko : o.dataset.en; }); }
+        // 나라를 고르는 동안은 마이크를 잠깐 쉬게 해서 "띵" 소리가 나지 않게 함. 고른 뒤 같은 쪽 마이크를 한 번만 다시 켬
+        let trPickResume = null;
+        function trPickStart() { if (trPickResume === null && recog) { trPickResume = trReverse; stopVoiceInput(); } }
+        function trPickEnd() { if (trPickResume === null) return; const side = trPickResume; trPickResume = null; setTimeout(() => { if (recog) return; trReverse = side; startVoiceInput(); }, 150); }
+        ['pointerdown', 'mousedown', 'touchstart', 'focus'].forEach(ev => document.addEventListener(ev, e => { if (e.target && e.target.id === 'tr-lang') { trPickStart(); trLangListKo(true); } }, true));
+        ['change', 'blur'].forEach(ev => document.addEventListener(ev, e => { if (e.target && e.target.id === 'tr-lang') { trLangListKo(false); trPickEnd(); } }, true));
+        // ---- 음성 입력: 번역기를 열면 바로 듣기 시작 (말하면 입력창에 글자로 채워짐) ----
+        let recog = null, voiceToken = 0;
+        const KEYBOARD_TIP = ' (지금은 글자 입력창을 누르고 키보드의 🎤로 말해도 됩니다)';
+        function voiceSupported() { return !!(window.SpeechRecognition || window.webkitSpeechRecognition); }
+        function showVoiceStatus(msg, isErr) {
+            const el = document.getElementById('tr-voice-status');
+            el.innerText = msg || ''; el.style.display = msg ? 'block' : 'none'; el.classList.toggle('err', !!isErr);
+        }
+        // 위 칸(한국어)·아래 칸(외국어) 중 지금 쓰는 칸: trReverse가 true면 아래 칸
+        let trKeepText = false; // 자판으로 고친 글자는 마이크를 다시 켜도 지우지 않고 그 뒤에 이어서 적음
+        // 자판으로 고친 뒤 키보드를 내리면(뒤로 버튼 등) 고치기 상태를 끝냄 → 그다음 칸을 누르면 바로 마이크가 켜지고, 고친 글 뒤에 이어서 적힘
+        (() => { const vv = window.visualViewport; if (!vv) return; let full = vv.height;
+            vv.addEventListener('resize', () => { full = Math.max(full, vv.height); const t = document.getElementById('tr-input');
+                if (t && !t.readOnly && document.activeElement === t && vv.height > full - 80) { t.blur(); trResumeMic(); } }); })(); // 키보드를 내려도 고치기 끝 → 마이크 다시 켬
+        // 한국어 칸 고치기 (자판 버튼 없이):
+        //  1) 글이 있을 때 틀린 곳을 누르면 → 마이크 멈추고, 누른 자리에 커서 + 자판이 올라옴
+        //  2) 자판으로 고친 뒤 칸을 한 번 더 누르면(또는 자판을 내리면) → 자판 내려가고 마이크가 켜져 글 맨 뒤에 이어서 적힘
+        //  3) 글이 없을 때 누르면 → 지금처럼 마이크 켜기
+        let trEnterEdit = false;
+        function trBoxDown(t) { if (t.readOnly && t.value.trim()) { stopVoiceInput(); trKeepText = true; t.readOnly = false; trEnterEdit = true; } }
+        function trResumeMic() { trKeepText = true; setTimeout(() => { if (recog) return; trReverse = false; stopVoiceInput(); startVoiceInput(); }, 400); }
+        // ---- 길게 누르면 붙여넣기 ----
+        //  빈 칸을 길게 누르면: 복사해 둔 글을 바로 넣음 (폰이 허락을 물으면 '허용'). 안 되면 자판과 '붙여넣기' 메뉴가 뜨게 칸을 열어 줌
+        //  글이 있는 칸은 원래처럼 길게 누르면 폰의 '붙여넣기' 메뉴를 쓸 수 있게 칸을 열어 둠
+        let trLongPressed = false;
+        // 폰은 손가락을 '뗄 때'에만 붙여넣기 권한이 생겨서: 길게 누르면 '드르륵' 진동 → 손을 떼는 순간 붙여넣음
+        function trSetupLongPaste(id, rev) {
+            const t = document.getElementById(id); if (!t) return;
+            let timer = null, armed = false, sx = 0, sy = 0;
+            const reset = () => { clearTimeout(timer); timer = null; armed = false; };
+            t.addEventListener('touchstart', e => { trLongPressed = false; reset(); const p = e.touches[0]; sx = p.clientX; sy = p.clientY;
+                timer = setTimeout(() => { timer = null; armed = true; try { navigator.vibrate && navigator.vibrate(40); } catch (err) {} }, 550); }, { passive: true });
+            t.addEventListener('touchmove', e => { const p = e.touches[0]; if (Math.hypot(p.clientX - sx, p.clientY - sy) > 12) reset(); }, { passive: true });
+            t.addEventListener('touchend', e => { const go = armed; reset(); if (!go) return; e.preventDefault(); trLongPressed = true; trLongPaste(t, rev); }, { passive: false });
+            t.addEventListener('touchcancel', reset);
+            t.addEventListener('contextmenu', e => { if (t.readOnly) e.preventDefault(); }); // 길게 누를 때 폰의 글자 선택 메뉴가 끼어들지 않게
+            // 컴퓨터(마우스)용: 길게 눌렀다 떼면 붙여넣기
+            let mt = 0; t.addEventListener('mousedown', () => { mt = Date.now(); });
+            t.addEventListener('mouseup', () => { if (mt && Date.now() - mt > 550 && !('ontouchstart' in window)) { trLongPressed = true; trLongPaste(t, rev); } mt = 0; });
+            t.addEventListener('click', e => { if (trLongPressed) { trLongPressed = false; e.stopImmediatePropagation(); e.preventDefault(); } }, true); // 길게 누른 뒤의 손 뗌은 마이크 켜기로 치지 않음
+        }
+        async function trLongPaste(t, rev) {
+            trLongPressed = true; trEnterEdit = false;
+            stopVoiceInput(); trReverse = !!rev; trKeepText = true;
+            if (!t.value.trim()) {
+                let txt = ''; try { txt = ((await navigator.clipboard.readText()) || '').trim(); } catch (e) {}
+                if (txt) { t.value = txt; t.readOnly = true; t.blur(); return; } // 바로 붙여넣음 → 통역 버튼만 누르면 됨
+            }
+            t.readOnly = false; t.focus(); try { t.setSelectionRange(t.value.length, t.value.length); } catch (e) {} // 자판이 뜨고, 칸을 길게 누르면 폰의 '붙여넣기'가 나옴
+        }
+        async function trPasteBtn() { // 📋 COPY 버튼: 복사해 둔 글을 내 말 칸에 넣음. 안 되면 자판을 열어 길게 눌러 붙여넣게 함
+            stopVoiceInput(); trReverse = false; trKeepText = true; trEnterEdit = false;
+            const t = document.getElementById('tr-input');
+            let txt = ''; try { txt = ((await navigator.clipboard.readText()) || '').trim(); } catch (e) {}
+            if (txt) { const cur = t.value.trim(); t.readOnly = false; t.value = cur ? cur + ' ' + txt : txt; t.readOnly = true; t.blur(); showToast('붙여넣었습니다'); return; } // 칸에 있던 글은 지우지 않고 뒤에 이어 붙임
+            typeKo(); showToast('길게 눌러 붙여넣으세요');
+        }
+        document.addEventListener('DOMContentLoaded', () => { trSetupLongPaste('tr-input', false); trSetupLongPaste('tr-input2', true); });
+        function trBoxTap(t) {
+            if (trEnterEdit) { trEnterEdit = false; return; } // 방금 고치기를 시작한 누름
+            if (!t.readOnly) { t.blur(); trResumeMic(); return; }
+            toggleVoiceInput(false);
+        }
+        function typeKo() { stopVoiceInput(); trKeepText = true; const t = document.getElementById('tr-input'); t.readOnly = false; t.focus(); }
+        function trInputEl() { return document.getElementById(trReverse ? 'tr-input2' : 'tr-input'); }
+        const TR_TAP_SPEAK = { en: 'Tap here and speak', ja: 'ここをタップして話してください', 'zh-CN': '点击这里说话', 'zh-TW': '點擊這裡說話', 'zh-HK': '點擊這裡說話', vi: 'Chạm vào đây và nói', th: 'แตะที่นี่แล้วพูด', tl: 'I-tap dito at magsalita', ms: 'Ketik di sini dan bercakap', id: 'Ketuk di sini dan bicara', my: 'ဒီမှာနှိပ်ပြီး ပြောပါ', de: 'Hier tippen und sprechen', fr: 'Touchez ici et parlez', es: 'Toque aquí y hable', it: 'Tocca qui e parla', nl: 'Tik hier en spreek', pt: 'Toque aqui e fale', pl: 'Dotknij tutaj i mów', cs: 'Klepněte sem a mluvte', sv: 'Tryck här och tala', tr: 'Buraya dokunun ve konuşun', ru: 'Нажмите здесь и говорите', mn: 'Энд дарж ярина уу', uz: 'Shu yerga bosing va gapiring', kk: 'Осы жерді басып, сөйлеңіз', ar: 'اضغط هنا وتحدث', hi: 'यहाँ टैप करें और बोलें', no: 'Trykk her og snakk', ne: 'यहाँ थिच्नुहोस् र बोल्नुहोस्', da: 'Tryk her og tal', fi: 'Napauta tästä ja puhu', el: 'Πατήστε εδώ και μιλήστε', he: 'הקישו כאן ודברו', km: 'ចុចទីនេះ ហើយនិយាយ', bn: 'এখানে ট্যাপ করে বলুন', ur: 'یہاں ٹیپ کریں اور بولیں', si: 'මෙතන ස්පර්ශ කර කතා කරන්න', uk: 'Натисніть тут і говоріть', hu: 'Koppintson ide, és beszéljen', ro: 'Atingeți aici și vorbiți' };
+        const TR_BTN = { en: ['Clear', 'Translate'], ja: ['消去', '翻訳'], 'zh-CN': ['清除', '翻译'], 'zh-TW': ['清除', '翻譯'], 'zh-HK': ['清除', '翻譯'], vi: ['Xóa', 'Dịch'], th: ['ลบ', 'แปล'], tl: ['Burahin', 'Isalin'], ms: ['Padam', 'Terjemah'], id: ['Hapus', 'Terjemahkan'], my: ['ဖျက်', 'ဘာသာပြန်'], de: ['Löschen', 'Übersetzen'], fr: ['Effacer', 'Traduire'], es: ['Borrar', 'Traducir'], it: ['Cancella', 'Traduci'], nl: ['Wissen', 'Vertalen'], pt: ['Apagar', 'Traduzir'], pl: ['Wyczyść', 'Tłumacz'], cs: ['Smazat', 'Přeložit'], sv: ['Rensa', 'Översätt'], tr: ['Sil', 'Çevir'], ru: ['Очистить', 'Перевести'], mn: ['Арилгах', 'Орчуулах'], uz: ['Tozalash', 'Tarjima'], kk: ['Тазалау', 'Аудару'], ar: ['مسح', 'ترجمة'], hi: ['मिटाएँ', 'अनुवाद'], no: ['Tøm', 'Oversett'], ne: ['मेटाउनुहोस्', 'अनुवाद'], da: ['Ryd', 'Oversæt'], fi: ['Tyhjennä', 'Käännä'], el: ['Διαγραφή', 'Μετάφραση'], he: ['ניקוי', 'תרגום'], km: ['លុប', 'បកប្រែ'], bn: ['মুছুন', 'অনুবাদ'], ur: ['صاف کریں', 'ترجمہ'], si: ['මකන්න', 'පරිවර්තනය'], uk: ['Очистити', 'Перекласти'], hu: ['Törlés', 'Fordítás'], ro: ['Șterge', 'Tradu'] };
+        const TR_LISTEN = { en: 'Listening', ja: '聞いています', 'zh-CN': '正在听', 'zh-TW': '正在聽', 'zh-HK': '正在聽', vi: 'Đang nghe', th: 'กำลังฟัง', tl: 'Nakikinig', ms: 'Mendengar', id: 'Mendengarkan', my: 'နားထောင်နေသည်', de: 'Hört zu', fr: 'Écoute', es: 'Escuchando', it: 'Ascolta', nl: 'Luistert', pt: 'Ouvindo', pl: 'Słucham', cs: 'Poslouchám', sv: 'Lyssnar', tr: 'Dinliyor', ru: 'Слушаю', mn: 'Сонсож байна', uz: 'Tinglamoqda', kk: 'Тыңдап жатыр', ar: 'يستمع', hi: 'सुन रहे हैं', no: 'Lytter', ne: 'सुन्दै हुनुहुन्छ', da: 'Lytter', fi: 'Kuuntelen', el: 'Ακούω', he: 'מקשיב', km: 'កំពុងស្តាប់', bn: 'শুনছি', ur: 'سن رہے ہیں', si: 'අහගෙන ඉන්නවා', uk: 'Слухаю', hu: 'Figyelek', ro: 'Ascult' };
+        function trFxLang() { return langMap[document.getElementById('tr-lang').value] || 'en'; }
+        function trFxSayLabel(on) { const k = trFxLang(); return on ? (TR_SPEAK_NOW[k] || TR_SPEAK_NOW.en) : (TR_LISTEN[k] || TR_LISTEN.en); } // 외국어 쪽 라벨: 말할 때는 그 나라 말 '말씀하세요', 들을 때는 그 나라 말 '듣는 중'
+        function fitBtnText(b) { b.style.fontSize = ''; let f = 25; while (f > 12 && b.scrollWidth > b.clientWidth) { f--; b.style.fontSize = f + 'px'; } } // 긴 외국어는 버튼 안에 들어가게 글자를 줄임
+        const TR_SPEAK_NOW = { en: "Please speak loudly", ja: "大きな声で話してください", "zh-CN": "请大声说话", "zh-TW": "請大聲說話", "zh-HK": "請大聲講", vi: "Xin hãy nói to", th: "กรุณาพูดดังๆ", tl: "Pakilakasan po ang boses", ms: "Sila bercakap dengan kuat", id: "Silakan bicara dengan keras", my: "ကျယ်ကျယ်ပြောပါ", de: "Bitte laut sprechen", fr: "Parlez fort, s’il vous plaît", es: "Hable fuerte, por favor", it: "Parli a voce alta, per favore", nl: "Spreek alstublieft luid", pt: "Fale alto, por favor", pl: "Proszę mówić głośno", cs: "Mluvte prosím nahlas", sv: "Tala högt, tack", tr: "Lütfen yüksek sesle konuşun", ru: "Говорите громко, пожалуйста", mn: "Чанга ярина уу", uz: "Iltimos, baland ovozda gapiring", kk: "Қатты сөйлеңіз", ar: "تكلم بصوت عالٍ من فضلك", hi: "कृपया ज़ोर से बोलिए", no: "Vennligst snakk høyt", ne: "कृपया ठूलो स्वरमा बोल्नुहोस्", da: "Tal venligst højt", fi: "Puhu kovaa, ole hyvä", el: "Παρακαλώ, μιλήστε δυνατά", he: "בבקשה, דברו בקול רם", km: "សូមនិយាយខ្លាំងៗ", bn: "অনুগ্রহ করে জোরে বলুন", ur: "براہ کرم اونچی آواز میں بولیں", si: "කරුණාකර හයියෙන් කතා කරන්න", uk: "Говоріть голосно, будь ласка", hu: "Kérem, beszéljen hangosan", ro: "Vă rog, vorbiți tare" }; // 뒷좌석 손님 목소리가 작아 잘 안 받아 적혀서 '크게 말씀해 주세요'로
+        const TR_SPEAK_2 = {"en": ["Please speak", "*LOUDLY"], "ja": ["*大きな声で", "お話しください"], "zh-CN": ["*大声", "请说话"], "zh-TW": ["*大聲", "請說話"], "zh-HK": ["*大聲", "請講"], "vi": ["Mời bạn nói", "*TO LÊN"], "th": ["กรุณาพูด", "*ดังๆ"], "tl": ["Magsalita po kayo", "*NANG MALAKAS"], "ms": ["Sila bercakap", "*DENGAN KUAT"], "id": ["Silakan bicara", "*DENGAN KERAS"], "my": ["*ကျယ်ကျယ်", "ပြောပါ"], "de": ["Bitte sprechen", "*LAUT"], "fr": ["Parlez, s’il vous plaît", "*FORT"], "es": ["Hable, por favor", "*FUERTE"], "it": ["Parli, per favore", "*A VOCE ALTA"], "nl": ["Spreek alstublieft", "*LUID"], "pt": ["Fale, por favor", "*ALTO"], "pl": ["Proszę mówić", "*GŁOŚNO"], "cs": ["Mluvte, prosím", "*NAHLAS"], "sv": ["Tala, tack", "*HÖGT"], "tr": ["Lütfen konuşun", "*YÜKSEK SESLE"], "ru": ["Говорите, пожалуйста", "*ГРОМКО"], "mn": ["*Чанга", "Ярина уу"], "uz": ["*Baland ovozda", "Gapiring"], "kk": ["*Қатты", "Сөйлеңіз"], "ar": ["تفضل بالكلام", "*بصوت عالٍ"], "hi": ["*ज़ोर से", "कृपया बोलिए"], "no": ["Vennligst snakk", "*HØYT"], "ne": ["*ठूलो स्वरमा", "कृपया बोल्नुहोस्"], "da": ["Tal venligst", "*HØJT"], "fi": ["Puhu, ole hyvä", "*KOVAA"], "el": ["Παρακαλώ, μιλήστε", "*ΔΥΝΑΤΑ"], "he": ["בבקשה, דברו", "*בקול רם"], "km": ["សូមនិយាយ", "*ខ្លាំងៗ"], "bn": ["*জোরে", "অনুগ্রহ করে বলুন"], "ur": ["*اونچی آواز میں", "براہ کرم بولیں"], "si": ["*හයියෙන්", "කරුණාකර කතා කරන්න"], "uk": ["Говоріть, будь ласка", "*ГОЛОСНО"], "hu": ["Kérem, beszéljen", "*HANGOSAN"], "ro": ["Vă rog, vorbiți", "*TARE"]}; // 손님 칸 안내: 어제까지 쓰던 문구(원래 크기) + '크게' 말만 따로 한 줄 더 크게
+        function fitForeignText() { // 외국어 국가명과 아래 안내 문구를 칸 너비에 맞게 자동으로 키움 (잘리지 않게)
+            const cv = document.createElement('canvas').getContext('2d');
+            const s = document.getElementById('tr-lang'), cs = getComputedStyle(s);
+            const avail = s.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - 30; // 우측 화살표 자리 제외
+            if (avail > 0) {
+                const txt = s.options[s.selectedIndex] ? s.options[s.selectedIndex].text : '';
+                let f = 40; while (f > 14) { cv.font = `700 ${f}px ${cs.fontFamily}`; if (cv.measureText(txt).width <= avail) break; f--; }
+                s.style.fontSize = f + 'px';
+            }
+            const n = document.getElementById('tr-speak-now');
+            if (n.classList.contains('two')) { fitLive(); return; }
+            let f = 40; n.style.fontSize = f + 'px';
+            while (f > 12 && n.scrollWidth > n.clientWidth) { f--; n.style.fontSize = f + 'px'; } // 실제 화면 기준으로 잘리지 않을 때까지 줄임
+
+        }
+        function fitLive() { // 두 줄 안내: 보통 줄은 원래 크기(최대 40px), '크게' 줄은 더 크게(최대 64px), 칸 너비에 맞춤
+            const n = document.getElementById('tr-speak-now'); n.style.fontSize = '';
+            const mic = n.querySelector('.sn-mic'), avail = n.clientWidth - (mic ? mic.offsetWidth + 12 : 0);
+            n.querySelectorAll('.sn-l').forEach(el => { let f = el.classList.contains('sn-big') ? 64 : 40; el.style.fontSize = f + 'px'; while (f > 14 && el.scrollWidth > avail) { f -= 2; el.style.fontSize = f + 'px'; } });
+        }
+        function trForeignButtons() {
+            document.getElementById('tr-speak-now').innerText = '🎤 ' + (TR_TAP_SPEAK[langMap[document.getElementById('tr-lang').value]] || TR_TAP_SPEAK.en);
+            fitForeignText();
+            const t = TR_BTN[langMap[document.getElementById('tr-lang').value]] || TR_BTN.en;
+            const c = document.getElementById('tr-clear2'), g = document.getElementById('tr-go2');
+            c.innerText = t[0]; g.innerText = t[1]; fitBtnText(c); fitBtnText(g);
+        }
+        function trForeignPlaceholder() { return '🎤 ' + (TR_TAP_SPEAK[langMap[document.getElementById('tr-lang').value]] || TR_TAP_SPEAK.en); }
+        function setMic(on) {
+            const top = document.getElementById('tr-input'), bot = document.getElementById('tr-input2');
+            document.getElementById('tr-mic').classList.toggle('on', on && !trReverse);
+            document.getElementById('tr-mic2').classList.toggle('on', on && trReverse);
+            top.classList.toggle('listening', on && !trReverse); bot.classList.toggle('listening', on && trReverse);
+            top.placeholder = on && !trReverse ? '말씀하세요...' : '번역할 텍스트를 입력하세요';
+            const panels = document.querySelectorAll('#translator-view .tr-panel'), kor = panels[0], fxp = panels[1];
+            if (kor && fxp) {
+                kor.classList.toggle('speaker', !trReverse); kor.classList.toggle('listener', trReverse); // 마이크가 꺼져도 마지막으로 말한 쪽 화면 배치를 그대로 유지
+                fxp.classList.toggle('speaker', trReverse); fxp.classList.toggle('listener', !trReverse);
+                const ico = [kor, fxp].map(p => p.querySelector('.tr-icon'));
+                ico[0].textContent = on && !trReverse ? '' : '👂'; // 말하는 쪽 입술 그림은 없앰
+                ico[1].textContent = on && trReverse ? '' : '👂';
+                const say = [kor, fxp].map(p => p.querySelector('.tr-say'));
+                say[0].textContent = on && !trReverse ? '말씀하세요' : '듣는 중';
+                say[1].textContent = trFxSayLabel(on && trReverse);
+            }
+            bot.placeholder = '';
+            const sn = document.getElementById('tr-speak-now'); // 말할 때는 그 나라 말 "Please speak" 문구, 아닐 때는 "Tap here" 문구
+            if (sn) { const k = trFxLang(), live = on && trReverse;
+                if (live) sn.innerHTML = '<span class="sn-mic">🎤</span><span class="sn-col">' + (TR_SPEAK_2[k] || TR_SPEAK_2.en).map(t => `<span class="sn-l${t[0] === '*' ? ' sn-big' : ''}" dir="auto">${escHtml(t.replace(/^\*/, ''))}</span>`).join('') + '</span>'; // 마이크는 왼쪽, 두 줄 글은 가운데 맞춤 // 손님이 말할 때: 두 줄로 크게
+                else sn.innerText = '🎤 ' + (TR_TAP_SPEAK[k] || TR_TAP_SPEAK.en);
+                sn.classList.toggle('live', live); sn.classList.toggle('two', live); fitForeignText(); }
+        }
+        setInterval(() => { // 외국어 칸에 말한 글자가 나오면 안내 문구를 숨기고, 칸이 비면 다시 보임
+            const sn = document.getElementById('tr-speak-now'), b = document.getElementById('tr-input2');
+            if (sn && b) sn.style.visibility = b.value.trim() ? 'hidden' : 'visible';
+            document.querySelectorAll('#translator-view .tr-note').forEach(n => { n.parentElement.style.setProperty('--note-h', (n.offsetHeight + 22) + 'px'); }); // 큰 글 아래부터 입력 글자가 나오게
+            if (document.getElementById('translator-view').style.display === 'flex') document.querySelectorAll('#translator-view .tr-actions button:not(.tr-mic)').forEach(btn => { if (btn.scrollWidth > btn.clientWidth + 1) fitBtnText(btn); }); // 버튼 글자가 잘리면(글꼴이 늦게 바뀐 경우 등) 다시 칸에 맞춤
+        }, 250);
+        // 통역 화면에서 나라를 바꾸면 앱 전체(첫 화면·문구·관광·인사말)의 나라도 같이 바꿈 — 어디서 고르든 한 나라로 맞춤
+        function clearTrNotes() { document.querySelectorAll('#translator-view .tr-note').forEach(n => n.remove()); } // 지난 대화의 작은 글(상대 말) 지우기
+        function syncCountryFromTr(id) {
+            const c = findCountry(id); if (!c || id === 'ko') return;
+            if (id !== curL) { clearTrNotes(); document.getElementById('tr-input2').value = ''; } // 다른 나라로 바꾸면 지난 대화 글을 지움
+            curL = id; try { localStorage.setItem('taxi_v10_lastlang', id); localStorage.setItem('taxi_v10_trlang', id); } catch (e) {}
+            renderLastCountry();
+            if (!document.getElementById('phrase-view').classList.contains('hidden')) document.getElementById('header-title').innerText = c.name;
+        }
+        function trLangChanged() { syncCountryFromTr(document.getElementById('tr-lang').value); document.getElementById('tr-input2').placeholder = ''; trForeignButtons(); document.getElementById('tr-input2').closest('.tr-panel').querySelector('.tr-say').textContent = trFxSayLabel(!!(recog && trReverse)); if (trReverse && recog) startVoiceInput(); }
+        function micErrorText(name) {
+            if (name === 'NotAllowedError' || name === 'PermissionDeniedError' || name === 'not-allowed' || name === 'service-not-allowed')
+                return '마이크가 허용되지 않았어요. ① 크롬 주소창 왼쪽 아이콘 → 권한 → 마이크 허용, ② 그래도 안 되면 폰 설정 → 앱 → Chrome → 권한 → 마이크 → "앱 사용 중에만 허용".' + KEYBOARD_TIP;
+            if (name === 'NotFoundError' || name === 'audio-capture') return '마이크를 찾을 수 없어요. 다른 앱이 마이크를 쓰고 있지 않은지 확인하세요.' + KEYBOARD_TIP;
+            if (name === 'NotReadableError') return '다른 앱이 마이크를 사용 중이에요. 그 앱을 닫고 🎤를 다시 눌러 주세요.';
+            if (name === 'SecurityError') return '음성 입력은 https 주소에서만 돼요. (현재 주소 형식: ' + location.protocol + ')' + KEYBOARD_TIP;
+            if (name === 'network') return '음성 인식에는 인터넷 연결이 필요해요. 연결을 확인하고 🎤를 다시 눌러 주세요.';
+            if (name === 'language-not-supported') return '이 언어는 음성 입력을 지원하지 않아요.' + KEYBOARD_TIP;
+            if (name === 'no-speech') return '목소리가 들리지 않았어요. 🎤를 눌러 다시 말씀하세요.';
+            return '음성 입력을 시작하지 못했어요 (' + name + '). 🎤를 다시 눌러 보세요.' + KEYBOARD_TIP;
+        }
+        async function ensureMic() {
+            const md = navigator.mediaDevices;
+            if (!md || !md.getUserMedia) return true; // 인식기가 직접 시도
+            try { const st = await navigator.permissions.query({ name: 'microphone' }); if (st.state === 'granted') return true; } catch (e) {}
+            try { const stream = await md.getUserMedia({ audio: true }); stream.getTracks().forEach(t => t.stop()); return true; }
+            catch (err) { showVoiceStatus(micErrorText(err && err.name), true); return false; }
+        }
+        async function startVoiceInput() {
+            const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (!SR) { showVoiceStatus('이 브라우저는 음성 입력을 지원하지 않아요. 크롬으로 열어 주세요. (카카오톡·네이버 앱 안에서는 안 돼요)' + KEYBOARD_TIP, true); return; }
+            if (window.isSecureContext === false) { showVoiceStatus(micErrorText('SecurityError'), true); return; }
+            stopVoiceInput();
+            const token = ++voiceToken;
+            showVoiceStatus('마이크 준비 중...', false);
+            if (!(await ensureMic())) return;
+            if (token !== voiceToken) return; // 준비 중에 닫히거나 다른 동작이 시작됨
+            window.speechSynthesis.cancel();
+            const input = trInputEl();
+            // 말을 잠깐 멈추면 인식기가 스스로 꺼지므로, 번역·닫기·🎤를 누를 때까지 계속 다시 켜서 이어 듣는다
+            let quickEnds = 0;
+            const listen = first => {
+                if (token !== voiceToken) return;
+                const r = new SR();
+                r.lang = trReverse ? getLangCode(document.getElementById('tr-lang').value) : 'ko-KR'; // 입력 언어에 맞춰 인식
+                r.interimResults = true; r.continuous = false; r.maxAlternatives = 1;
+                const base = input.value.trim(), startedAt = Date.now();
+                let started = false, fatal = false, heard = false;
+                r.onstart = () => { started = true; if (recog === r) { setMic(true); showVoiceStatus('', false); } };
+                r.onresult = e => { heard = true; let t = ''; for (let i = 0; i < e.results.length; i++) t += e.results[i][0].transcript; input.value = (base ? base + ' ' : '') + t.trim(); };
+                r.onerror = e => { if (recog !== r) return; started = true; if (e.error === 'no-speech' || e.error === 'aborted') return; fatal = true; setMic(false); showVoiceStatus(micErrorText(e.error), true); };
+                r.onend = () => {
+                    if (recog !== r) return;
+                    quickEnds = (!heard && Date.now() - startedAt < 400) ? quickEnds + 1 : 0; // 켜자마자 꺼지는 일이 반복되면 무한 반복하지 않고 멈춤
+                    if (!fatal && token === voiceToken && !document.hidden && quickEnds < 5) { setTimeout(() => { if (recog === r && token === voiceToken) listen(false); }, 120); return; }
+                    recog = null; setMic(false);
+                };
+                recog = r;
+                try { r.start(); } catch (err) { recog = null; setMic(false); showVoiceStatus(micErrorText(err && err.name || 'start'), true); return; }
+                // 아무 반응(시작/오류)이 없으면 원인을 화면에 알려줌
+                if (first) setTimeout(() => { if (recog === r && !started) { setMic(false); showVoiceStatus('마이크가 시작되지 않았어요. 크롬에서 https 주소로 열었는지, 마이크가 허용돼 있는지 확인해 주세요. (현재 주소 형식: ' + location.protocol + ')' + KEYBOARD_TIP, true); } }, 3500);
+            };
+            listen(true);
+        }
+        function stopVoiceInput() { voiceToken++; const r = recog; recog = null; if (r) { try { r.abort(); } catch (e) {} } setMic(false); }
+        function toggleVoiceInput(rev) { if (recog && trReverse === !!rev) { stopVoiceInput(); return; } stopVoiceInput(); trReverse = !!rev; if (!(trKeepText && !trReverse)) document.getElementById(trReverse ? 'tr-input2' : 'tr-input').value = ''; startVoiceInput(); } // 새로 말하기 시작할 때 그쪽 칸의 이전 글자를 자동으로 지움
+
+        let trReverse = false; // false: 한국어 → 외국어, true: 외국어 → 한국어
+        // ---- 번역기 아이콘: 손가락으로 끌어 위치 이동 (좌/우 가장자리에 붙고 위치 기억) ----
+        let fabDragged = false;
+        function applyFabPos() {
+            const fab = document.getElementById('translator-fab'); let pos = null;
+            try { pos = JSON.parse(localStorage.getItem('taxi_v10_fabpos')); } catch (e) {}
+            if (!pos) return;
+            const size = 52, m = 12, top = Math.min(Math.max(pos.top, m), Math.max(m, window.innerHeight - size - m));
+            fab.style.top = top + 'px'; fab.style.bottom = 'auto';
+            if (pos.side === 'l') { fab.style.left = m + 'px'; fab.style.right = 'auto'; } else { fab.style.right = m + 'px'; fab.style.left = 'auto'; }
+        }
+        function fabClick() { if (fabDragged) { fabDragged = false; return; } openTranslator(); }
+        function initFab() {
+            const fab = document.getElementById('translator-fab');
+            applyFabPos(); window.addEventListener('resize', applyFabPos);
+            let sx = 0, sy = 0, ox = 0, oy = 0, moving = false, pid;
+            fab.addEventListener('pointerdown', e => { sx = e.clientX; sy = e.clientY; const r = fab.getBoundingClientRect(); ox = r.left; oy = r.top; moving = false; pid = e.pointerId; try { fab.setPointerCapture(pid); } catch (err) {} });
+            fab.addEventListener('pointermove', e => {
+                if (pid === undefined || e.pointerId !== pid) return;
+                const dx = e.clientX - sx, dy = e.clientY - sy;
+                if (!moving && Math.hypot(dx, dy) > 8) moving = true;
+                if (!moving) return;
+                const size = 52, x = Math.min(Math.max(ox + dx, 4), window.innerWidth - size - 4), y = Math.min(Math.max(oy + dy, 4), window.innerHeight - size - 4);
+                fab.style.left = x + 'px'; fab.style.top = y + 'px'; fab.style.right = 'auto'; fab.style.bottom = 'auto';
+            });
+            const end = e => {
+                if (e.pointerId !== pid) return; pid = undefined;
+                if (!moving) return; moving = false;
+                fabDragged = true; setTimeout(() => { fabDragged = false; }, 350);
+                const r = fab.getBoundingClientRect();
+                try { localStorage.setItem('taxi_v10_fabpos', JSON.stringify({ side: (r.left + r.width / 2) < window.innerWidth / 2 ? 'l' : 'r', top: r.top })); } catch (err) {}
+                applyFabPos();
+            };
+            fab.addEventListener('pointerup', end); fab.addEventListener('pointercancel', end);
+        }
+        function openTranslator() {
+            trReverse = false;
+            ensureSentinel(3);
+            const sel = document.getElementById('tr-lang'), saved = localStorage.getItem('taxi_v10_trlang');
+            sel.value = (curL && curL !== 'ko' && langMap[curL]) ? curL : (saved || 'en_us');
+            if (!sel.value) sel.value = 'en_us';
+            document.getElementById('translator-view').style.display = 'flex'; trForeignButtons();
+            document.getElementById('tr-input').value = ''; document.getElementById('tr-input2').value = ''; clearTrNotes(); setMic(false); showVoiceStatus('', false);
+            startVoiceInput();
+            if (!voiceSupported()) setTimeout(() => document.getElementById('tr-input').focus(), 60);
+        }
+        function closeTranslator() { stopVoiceInput(); const v = document.getElementById('translator-view'); v.style.display = 'none'; document.getElementById('tr-input').blur(); trReverse = false; }
+        function clearTranslator(rev) { stopVoiceInput(); trKeepText = false; trReverse = !!rev; trInputEl().value = ''; startVoiceInput(); }
+        function runTranslator(rev) {
+            if (rev !== undefined) trReverse = !!rev;
+            const text = trInputEl().value.trim();
+            if (!text) { showToast('번역할 텍스트를 입력하세요'); return; }
+            const id = document.getElementById('tr-lang').value;
+            try { localStorage.setItem('taxi_v10_trlang', id); } catch (e) {}
+            stopVoiceInput(); trInputEl().blur(); trKeepText = false;
+            const next = !trReverse; // 번역이 끝나면 반대쪽 입력창의 마이크를 자동으로 켬
+            Promise.resolve(translateAndOpen(text, null, id, trReverse)).then(async () => {
+                if (document.getElementById('display-overlay').style.display !== 'flex') return; // 번역이 안 됐으면 그대로 둠
+                await waitSpeechQuiet(); // 번역 음성이 다 나온 뒤에 마이크를 켜서 번역 소리를 다시 듣지 않게 함
+                closeDisplay();
+                // 다음에 말할 쪽 칸 위에, 방금 내가 한 말을 상대 나라 글자로 작게 남김
+                const nb = (next ? document.getElementById('tr-input2') : document.getElementById('tr-input')).parentElement;
+                let note = nb.querySelector('.tr-note');
+                if (!note) { note = document.createElement('div'); note.className = 'tr-note'; nb.appendChild(note); }
+                note.textContent = lastTranslated || '';
+                toggleVoiceInput(next);
+            });
+        }
+        function waitSpeechQuiet() { // 음성 읽기가 끝날 때까지 기다림 (최대 20초)
+            return new Promise(res => {
+                const t0 = Date.now();
+                const iv = setInterval(() => {
+                    if (!window.speechSynthesis.speaking && Date.now() - t0 > 600) { clearInterval(iv); setTimeout(res, 400); }
+                }, 200);
+                setTimeout(() => { clearInterval(iv); res(); }, 20000);
+            });
+        }
+        function selectTour(i) {
+            if(selectedTourIdx === i) {
+                showTour(i);
+            } else {
+                selectedTourIdx = i;
+                const searchInput = document.getElementById('tour-search-input');
+                if(searchInput && searchInput.value.trim()) {
+                    filterTour(searchInput.value);
+                } else {
+                    renderTour();
+                }
+            }
+        }
+
+        function showTour(i){ isTourMode = true; translateAndOpen(tourDB[i].desc, tourDB[i].name); closeTour(); }
+        function openTourEditor(idx = -1) { ensureSentinel(3); const targetIdx = idx === -1 ? -1 : selectedTourIdx; tourEditIdx = targetIdx; document.getElementById('edit-tour-name').value = targetIdx > -1 ? tourDB[targetIdx].name : ""; document.getElementById('edit-tour-desc').value = targetIdx > -1 ? tourDB[targetIdx].desc : ""; document.getElementById('tour-editor').style.display = 'flex'; }
+        function closeTourEditor() { document.getElementById('tour-editor').style.display = 'none'; }
+        function saveTourData() { const name = document.getElementById('edit-tour-name').value, desc = document.getElementById('edit-tour-desc').value; if(name && desc) { if(tourEditIdx > -1) { tourDB[tourEditIdx] = {name, desc}; selectedTourIdx = -1; } else { tourDB.unshift({name, desc}); selectedTourIdx = 0; } saveTour(); const searchInput = document.getElementById('tour-search-input').value; if(searchInput.trim()) { filterTour(searchInput); } else { renderTour(); } document.getElementById('tour-list').scrollTop = 0; closeTourEditor(); } }
+        function moveTourToTop() { if(selectedTourIdx <= 0) return; const item = tourDB.splice(selectedTourIdx, 1)[0]; tourDB.unshift(item); selectedTourIdx = 0; saveTour(); const searchInput = document.getElementById('tour-search-input').value; if(searchInput.trim()) { filterTour(searchInput); } else { renderTour(); } document.getElementById('tour-list').scrollTop = 0; }
+        function moveTour(dir) { if(selectedTourIdx === -1) return; const newIdx = selectedTourIdx + dir; if(newIdx >= 0 && newIdx < tourDB.length) { [tourDB[selectedTourIdx], tourDB[newIdx]] = [tourDB[newIdx], tourDB[selectedTourIdx]]; selectedTourIdx = newIdx; saveTour(); const searchInput = document.getElementById('tour-search-input').value; if(searchInput.trim()) { filterTour(searchInput); } else { renderTour(); } } }
+        function deleteTour() { if(selectedTourIdx === -1) return; if(confirm("삭제할까요?")) { tourDB.splice(selectedTourIdx,1); selectedTourIdx=-1; saveTour(); const searchInput = document.getElementById('tour-search-input').value; if(searchInput.trim()) { filterTour(searchInput); } else { renderTour(); } } }
+
+        function politeForeign(t, code) { // 명령문을 부드러운 부탁 말투로 바꿈 (영어 미국 · 중국어 간체 · 대만어 번체)
+            if (!t) return t;
+            const s = t.trim();
+            if (code === 'en') {
+                if (/^(could|would|please|excuse|may|can|sorry|thank|welcome|hello|hi|yes|no)\b/i.test(s)) return t;
+                const m = s.match(/^([A-Za-z]+)(\b[\s\S]*)$/);
+                if (!m) return t;
+                const verbs = /^(go|take|wait|fasten|put|turn|stop|use|show|tell|give|pay|open|close|come|sit|hold|wear|keep|stay|let|bring|look|check|enter|get|call|move|follow|hurry|sign|fill|write|read|touch|press|select|choose)$/i;
+                if (!verbs.test(m[1])) return t;
+                return 'Could you please ' + m[1].toLowerCase() + m[2].replace(/[.!]+\s*$/, '') + '?';
+            }
+            if (code === 'zh' || code === 'zh-TW' || code === 'zh-CN' || code === 'hk' || code === 'tw') {
+                const pre = (code === 'tw' || code === 'zh-TW' || code === 'hk' || code === 'zh-HK') ? '請您' : '请您';
+                if (/^(请|請|您|你|谢|謝|欢|歡|您好|你好|我|我们|我們|是|有|在)/.test(s)) return t;
+                if (/^(系|去|等|拿|付|開|开|關|关|坐|給|给|走|停|用|轉|转|慢|把|按|拿|带|帶)/.test(s)) return pre + s;
+            }
+            return t;
+        }
+        // 한국말 시간 앞의 '저녁·밤·새벽·아침·낮'을 '오전·오후'로 바꿔 번역기가 AM/PM을 빼먹지 않게 함 (화면의 내 말은 그대로)
+        function koTimeFix(t) {
+            return t.replace(/(저녁|밤|새벽|아침|낮|점심)\s*(\d{1,2})\s*시/g, (m, w, h) => {
+                const n = +h; if (n > 12) return m;
+                let pm;
+                if (w === '저녁') pm = true;
+                else if (w === '밤') pm = n >= 6 && n <= 11; // 밤 1~5시는 새벽(AM), 밤 12시는 그대로
+                else if (w === '낮' || w === '점심') pm = n <= 6 || n === 12;
+                else pm = false; // 새벽·아침
+                if (w === '밤' && n === 12) return m;
+                return (pm ? '오후 ' : '오전 ') + n + '시';
+            });
+        }
+        async function translateAndOpen(text, title, langId, reverse) {
+            const L = langId || curL, toKo = !!reverse; lastL = L;
+            lastSpeakLang = toKo ? 'ko-KR' : getLangCode(L);
+            const overlay = document.getElementById('display-overlay');
+            const koDiv = document.getElementById('text-ko');
+            const foreignDiv = document.getElementById('text-foreign');
+            ensureSentinel(3); document.getElementById('text-country').innerText = countryLabel(toKo ? 'ko' : L); koDiv.innerText = title || text; foreignDiv.innerText = "번역 중..."; overlay.style.display = 'flex';
+            document.getElementById('scroll-container').scrollTop = 0;
+            try {
+                if (!toKo && (typeof NL === 'undefined' || NL === 'ko')) text = koTimeFix(text); // '저녁 9시' → '오후 9시' 로 바꿔 번역에 PM이 꼭 나오게
+                const P = protectWords(text, toKo); // 단어장의 고유명사는 번역하지 않고 그대로
+                const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=${toKo ? (langMap[L]||'en') : 'ko'}&tl=${toKo ? 'ko' : (langMap[L]||'en')}&dt=t&q=${encodeURIComponent(P.t)}`);
+                const data = await res.json();
+                lastTranslated = restoreWords(data[0].map(p => p[0]).join(''), P.map);
+                if (!toKo && langMap[L] === 'en') lastTranslated = localizeEnglishVocab(lastTranslated, L);
+                if (!toKo) lastTranslated = politeForeign(lastTranslated, langMap[L]); // 영어(미국)·중국어 번역을 부드러운 부탁 말투로
+                foreignDiv.innerText = lastTranslated;
+                speak(lastTranslated, lastSpeakLang);
+            } catch(e) { logNav(`번역오류 ${e && e.name}:${e && String(e.message).slice(0,60)}`); foreignDiv.innerText = "통신 오류가 발생했습니다."; }
+        }
+        // ---- 통역 음성 속도 / 스크롤 동기화 ----
+        const SPEECH_RATE = 0.81; // 기존 0.85의 95%
+        const BASE_MS_PER_CHAR = { en: 60, ko: 90, zh: 190, ja: 130, other: 75 }; // 속도 1.0 기준 글자당 소요 시간(초기 추정값)
+        let speechCal = {};
+        try { speechCal = JSON.parse(localStorage.getItem('taxi_v10_speechcal')) || {}; } catch (e) { speechCal = {}; }
+        function saveSpeechCal() { try { localStorage.setItem('taxi_v10_speechcal', JSON.stringify(speechCal)); } catch (e) {} }
+        function calKeyOf(l) { return l.startsWith('en') ? 'en' : l; }
+        function baseKeyOf(l) { const p = l.split('-')[0]; return BASE_MS_PER_CHAR[p] ? p : 'other'; }
+        function modelDuration(t, l) {
+            const per = BASE_MS_PER_CHAR[baseKeyOf(l)];
+            const soft = (t.match(/[,;:、，；：]/g) || []).length * 180;
+            const hard = (t.match(/[.!?。！？…]/g) || []).length * 380;
+            return (t.length * per + soft + hard) / SPEECH_RATE;
+        }
+        let speakToken = 0;
+        let animationFrameId = null;
+        let resumeCtx = null; // 다른 앱 전환 등으로 끊겼을 때 이어서 시작할 지점 정보
+        function splitSentences(text) {
+            const re = /[^.!?。！？…]+[.!?。！？…]*\s*/g; let m, idx = 0; const out = [];
+            while ((m = re.exec(text))) { out.push({ start: idx, text: m[0] }); idx += m[0].length; }
+            if (!out.length) out.push({ start: 0, text });
+            return out;
+        }
+        function speak(t, l, offset = 0, fullOverride = null) {
+            const token = ++speakToken;
+            const fullText = fullOverride || t, fullLen = fullText.length;
+            resumeCtx = { fullText, lang: l, offset };
+            window.speechSynthesis.cancel(); if (animationFrameId) cancelAnimationFrame(animationFrameId);
+            const u = new SpeechSynthesisUtterance(t); u.lang = l; u.pitch = 1.0; u.rate = SPEECH_RATE;
+            const container = document.getElementById('scroll-container');
+            const maxScroll = () => Math.max(0, container.scrollHeight - container.clientHeight);
+
+            // 언어별 추정 재생시간 (+ 재생할 때마다 실제 시간으로 자가 보정)
+            const model = modelDuration(t, l);
+            const calKey = calKeyOf(l);
+            const estDuration = Math.max(model * (speechCal[calKey] || 1), 500);
+
+            let active = false, ended = false, fallbackStart = false, startPerf = 0, timeBase = null, displayProgress = 0;
+            let advanceCount = 0, targetProgress = 0, lastBoundaryTime = 0, avgGap = 0.05;
+
+            // 음성엔진이 실제 읽는 위치(charIndex)를 알려주면 우선 사용 (진행이 3회 이상 확인될 때만 신뢰)
+            u.onboundary = (e) => {
+                if (token !== speakToken || typeof e.charIndex !== 'number' || t.length === 0) return;
+                const p = Math.min(e.charIndex / t.length, 1);
+                if (p > targetProgress) {
+                    const gap = p - targetProgress;
+                    avgGap = advanceCount === 0 ? Math.max(gap, 0.01) : avgGap * 0.7 + gap * 0.3;
+                    targetProgress = p; advanceCount++; lastBoundaryTime = performance.now();
+                }
+                if (resumeCtx) resumeCtx.offset = offset + e.charIndex;
+            };
+
+            function scrollLoop(ts) {
+                if (!active || token !== speakToken) return;
+                if (timeBase === null) timeBase = ts;
+                let target = Math.min((ts - timeBase) / estDuration, 0.985);
+                if (advanceCount >= 3 && ts - lastBoundaryTime < 2000) {
+                    const extra = Math.min(Math.max(ts - lastBoundaryTime, 0) / estDuration, avgGap * 0.9);
+                    target = Math.min(targetProgress + extra, 0.985);
+                }
+                const next = displayProgress + (target - displayProgress) * 0.2;
+                if (next > displayProgress) displayProgress = next;
+                const overall = fullLen ? Math.min((offset + next * t.length) / fullLen, 1) : next;
+                container.scrollTop = overall * maxScroll();
+                if (resumeCtx && advanceCount === 0) resumeCtx.offset = offset + next * t.length;
+                animationFrameId = requestAnimationFrame(scrollLoop);
+            }
+            function startLoop(byFallback) {
+                if (active || ended || token !== speakToken) return;
+                active = true; fallbackStart = byFallback; startPerf = performance.now(); timeBase = null;
+                animationFrameId = requestAnimationFrame(scrollLoop);
+            }
+
+            const bestVoice = pickBestVoice(l);
+            if (bestVoice) u.voice = bestVoice;
+            u.onstart = () => startLoop(false);
+            u.onend = () => {
+                if (token !== speakToken) return;
+                ended = true;
+                const wasActive = active, dur = performance.now() - startPerf;
+                active = false; if (animationFrameId) cancelAnimationFrame(animationFrameId);
+                container.scrollTop = maxScroll();
+                resumeCtx = null; // 끝까지 들었으니 이어하기 정보는 폐기
+                if (wasActive && !fallbackStart && dur > 600 && t.length >= 6 && model > 0) {
+                    const ratio = Math.min(Math.max(dur / model, 0.4), 3);
+                    const old = speechCal[calKey];
+                    speechCal[calKey] = old ? old * 0.5 + ratio * 0.5 : ratio;
+                    saveSpeechCal();
+                }
+            };
+            u.onerror = () => { if (token !== speakToken) return; ended = true; active = false; if (animationFrameId) cancelAnimationFrame(animationFrameId); };
+            window.speechSynthesis.speak(u);
+            // 일부 기기는 onstart가 오지 않으므로 대비
+            setTimeout(() => { if (token === speakToken && !active && !ended) startLoop(true); }, 1500);
+        }
+        function repeatVoice() { if (lastTranslated) speak(lastTranslated, lastSpeakLang || getLangCode(curL)); }
+        function getLangCode(l) {
+            const codes = {
+                'en_us':'en-US', 'en_gb':'en-GB', 'en_ca':'en-CA', 'en_au':'en-AU', 'en_sg':'en-SG', 'en_in':'en-IN', 'en_nz':'en-NZ', 'en_ie':'en-IE', 'en_za':'en-ZA', 'en_ph':'en-PH',
+                'ko':'ko-KR', 'tw':'zh-TW', 'ja':'ja-JP', 'zh':'zh-CN', 'hk':'zh-HK', 'vn':'vi-VN', 'th':'th-TH', 'ph':'tl-PH', 'my':'ms-MY', 'id':'id-ID', 'mm':'my-MM',
+                'de':'de-DE', 'fr':'fr-FR', 'es':'es-ES', 'it':'it-IT', 'nl':'nl-NL', 'pt':'pt-PT', 'pl':'pl-PL', 'cz':'cs-CZ', 'se':'sv-SE', 'tr':'tr-TR', 'ru':'ru-RU',
+                'mn':'mn-MN', 'uz':'uz-UZ', 'kz':'kk-KZ', 'ae':'ar-AE', 'sa':'ar-SA', 'eg':'ar-EG', 'in':'hi-IN', 'br':'pt-BR', 'mx':'es-MX', 'no':'no-NO', 'ne':'ne-NP',
+                'ch':'de-CH', 'at':'de-AT', 'be':'fr-BE', 'dk':'da-DK', 'fi':'fi-FI', 'gr':'el-GR', 'lu':'fr-FR', 'il':'he-IL', 'qa':'ar-QA', 'kw':'ar-KW', 'mo':'zh-HK', 'kh':'km-KH', 'bd':'bn-BD', 'pk':'ur-PK', 'lk':'si-LK', 'arg':'es-AR', 'cl':'es-CL', 'co':'es-CO', 'pe':'es-PE', 'ua':'uk-UA', 'hu':'hu-HU', 'ro':'ro-RO'
+            };
+            return codes[l] || 'en-US';
+        }
+        function closeDisplay() { speakToken++; resumeCtx = null; if (animationFrameId) cancelAnimationFrame(animationFrameId); document.getElementById('display-overlay').style.display = 'none'; window.speechSynthesis.cancel(); if(isTourMode) { openTour(); isTourMode = false; } }
+        function saveTour() { localStorage.setItem('taxi_v10_tour', JSON.stringify(tourDB)); }
+        function saveData() { localStorage.setItem('taxi_v10_db', JSON.stringify(phraseDB)); }
+        function saveCats() { localStorage.setItem('taxi_v10_cats', JSON.stringify(categories)); }
+        function addCategory() { const n = prompt("새 카테고리 이름"); if(n) { categories.push(n); phraseDB[n]=[]; renderTabs(); saveCats(); saveData(); } }
+        function editCategory() { const n = prompt("이름 수정", curC); if(n) { const i = categories.indexOf(curC); categories[i]=n; phraseDB[n]=phraseDB[curC]; delete phraseDB[curC]; curC=n; renderTabs(); saveCats(); saveData(); } }
+        function deleteCategory() { if(confirm("카테고리를 삭제하면 안의 문장도 모두 삭제됩니다.")) { categories.splice(categories.indexOf(curC),1); delete phraseDB[curC]; curC=categories[0]||""; selectedPhraseIdx=-1; renderTabs(); renderPhrases(); saveCats(); saveData(); } }
+        function moveCategory(dir) { const idx = categories.indexOf(curC), newIdx = idx + dir; if (newIdx >= 0 && newIdx < categories.length) { [categories[idx], categories[newIdx]] = [categories[newIdx], categories[idx]]; saveCats(); renderTabs(); } }
+        function stampNow() { const d = new Date(), p = n => String(n).padStart(2, '0'); return { label: `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`, file: `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}_${p(d.getHours())}${p(d.getMinutes())}` }; }
+        function exportData() { const t = stampNow(); const data = { savedAt: t.label, db: phraseDB, cats: categories, tour: tourDB, greet: greetDB, greetPron: greetPronDB, fixes: fixesDB, names: namesDB }; const blob = new Blob([JSON.stringify(data)], {type: 'application/json'}); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `taxi_backup_${t.file}.json`; a.click(); }
+        function importData() { const input = document.createElement('input'); input.type = 'file'; input.onchange = e => { const picked = e.target.files[0]; if (!picked) return; const reader = new FileReader(); reader.onload = f => { const data = JSON.parse(f.target.result); if (!confirm(`이 백업 파일의 날짜: ${data.savedAt || '날짜 없음(예전 파일)'}\n파일 이름: ${picked.name}\n\n이 파일로 가져올까요? (지금 내용은 이 파일 내용으로 바뀝니다)`)) return; if(data.db) phraseDB = data.db; if(data.cats) categories = data.cats; if(data.tour) tourDB = data.tour; if(data.greet) { greetDB = data.greet; saveGreet(); } if(data.greetPron) { greetPronDB = data.greetPron; saveGreetPron(); } if (Array.isArray(data.fixes)) fixesDB = data.fixes; if (Array.isArray(data.names)) namesDB = data.names; saveWords(); saveData(); saveCats(); saveTour(); location.reload(); }; reader.readAsText(picked); }; input.click(); }
+        window.onload = init;
+    </script>
+    <script>
+        // ===== 단어장 (잘못 적히는 단어 → 말풍선, 고유명사 → 번역하지 않음) =====
+        function WT(k) { return (typeof T === 'function') ? T(k) : ({ del: '삭제', delConfirm: '삭제할까요?' })[k]; } // 택시 앱은 한국어, 통역 앱은 그 나라 말
+        // ---- 단어장: ① 잘못 적히는 단어 (틀린 말 → 맞는 말)  ② 고유명사 (번역하지 않음) ----
+        function romanizeKo(t) { // 한글 → 로마자 (국어의 로마자 표기법, 간단판). 예: 부캉이 → Bukangi
+            const I = ['g','kk','n','d','tt','r','m','b','pp','s','ss','','j','jj','ch','k','t','p','h'];
+            const V = ['a','ae','ya','yae','eo','e','yeo','ye','o','wa','wae','oe','yo','u','wo','we','wi','yu','eu','ui','i'];
+            const F = ['','k','k','k','n','n','n','t','l','k','m','l','l','l','p','l','m','p','p','t','t','ng','t','t','k','t','p','t'];
+            const L = { 1:'g', 4:'n', 7:'d', 8:'r', 16:'m', 17:'b', 19:'s', 22:'j', 23:'ch', 24:'k', 25:'t', 26:'p' };
+            const cs = [...t]; let out = '', any = false;
+            cs.forEach((c, k) => {
+                const n = c.charCodeAt(0) - 0xAC00;
+                if (n < 0 || n > 11171) { out += c; return; }
+                any = true;
+                const ini = Math.floor(n / 588), med = Math.floor((n % 588) / 28), fin = n % 28;
+                const nx = cs[k + 1] ? cs[k + 1].charCodeAt(0) - 0xAC00 : -1, nxIniO = nx >= 0 && nx <= 11171 && Math.floor(nx / 588) === 11;
+                out += I[ini] + V[med] + (fin && nxIniO && L[fin] ? L[fin] : F[fin]);
+            });
+            return any ? out.charAt(0).toUpperCase() + out.slice(1) : out;
+        }
+        const loadArr = k => { try { const v = JSON.parse(localStorage.getItem(k)); if (Array.isArray(v)) return v; } catch (e) {} return []; };
+        let fixesDB = loadArr('taxi_v10_fixes'), namesDB = loadArr('taxi_v10_names');
+        function saveWords() { try { localStorage.setItem('taxi_v10_fixes', JSON.stringify(fixesDB)); localStorage.setItem('taxi_v10_names', JSON.stringify(namesDB)); } catch (e) {} }
+        function protectWords(t, toNative) { // 번역 전에 고유명사를 번역기가 건드리지 못하는 표시로 바꿔 두고, 번역 뒤 이름으로 되돌림
+            const map = [];
+            namesDB.slice().sort((a, b) => b.length - a.length).forEach(w => {
+                const key = toNative ? romanizeKo(w) : w; if (!key) return;
+                const re = new RegExp(key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+                t = t.replace(re, () => { map.push(toNative ? w : romanizeKo(w)); return 'ZQX' + (map.length - 1) + 'Q'; });
+            });
+            return { t, map };
+        }
+        function restoreWords(t, map) { return map.length ? t.replace(/Z\s*Q\s*X\s*(\d+)\s*Q/gi, (m, i) => map[+i] !== undefined ? map[+i] : m) : t; }
+        let wordsTab = 0;
+        function openWords() { ensureSentinel(3); document.getElementById('words-editor').style.display = 'flex'; renderWords(); }
+        function closeWords() { document.getElementById('words-editor').style.display = 'none'; document.querySelectorAll('#words-editor input').forEach(i => i.blur()); }
+        function wordsTabTo(n) { wordsTab = n; renderWords(); }
+        function renderWords() {
+            document.querySelectorAll('.words-tab').forEach((b, i) => b.classList.toggle('on', i === wordsTab));
+            document.getElementById('words-pane-fix').style.display = wordsTab === 0 ? 'block' : 'none';
+            document.getElementById('words-pane-name').style.display = wordsTab === 1 ? 'block' : 'none';
+            const del = (fn, i) => `<button onclick="${fn}(${i})" class="w-del">${escHtml(WT('del'))}</button>`;
+            document.getElementById('fix-list').innerHTML = fixesDB.map((f, i) => `<div class="greet-edit-row"><span class="w-wrong">${escHtml(f.w)}</span><span class="w-arrow">→</span><span class="w-right">${escHtml(f.r)}</span>${del('deleteFix', i)}</div>`).join('');
+            document.getElementById('name-list').innerHTML = namesDB.map((w, i) => { const ro = romanizeKo(w); return `<div class="greet-edit-row"><span class="w-right">${escHtml(w)}${ro !== w ? ` <span class="w-ro">${escHtml(ro)}</span>` : ''}</span>${del('deleteName', i)}</div>`; }).join('');
+        }
+        function addFix() { const a = document.getElementById('fx-wrong'), b = document.getElementById('fx-right'), w = a.value.trim(), r = b.value.trim(); if (!w || !r || w === r) return; fixesDB = fixesDB.filter(f => f.w !== w); fixesDB.push({ w, r }); saveWords(); a.value = ''; b.value = ''; renderWords(); }
+        function deleteFix(i) { if (!confirm(`"${fixesDB[i].w} → ${fixesDB[i].r}"\n${WT('delConfirm')}`)) return; fixesDB.splice(i, 1); saveWords(); renderWords(); }
+        function addName() { const a = document.getElementById('nm-word'), v = a.value.trim(); if (!v) return; if (!namesDB.includes(v)) namesDB.push(v); saveWords(); a.value = ''; renderWords(); }
+        function deleteName(i) { if (!confirm(`"${namesDB[i]}"\n${WT('delConfirm')}`)) return; namesDB.splice(i, 1); saveWords(); renderWords(); }
+        // 내 말 칸: 말이 끝나고 잠깐 멈추면, 단어장의 헷갈리는 단어 바로 위에 말풍선(맞는 말)을 띄움
+        //  - 말풍선을 누르면 맞는 말로 바뀌고 마이크가 다시 켜져 이어서 말함
+        //  - 고르지 않으려면 칸을 톡 치면 말풍선이 사라지고 마이크가 켜짐
+        //  - 계속 말하는 중에는 말풍선을 숨김
+        let keepCount = {}, lastVal = '', lastChange = 0, bubbleIdx = -1;
+        function countOf(v, w) { return w ? v.split(w).length - 1 : 0; }
+        function bubbleOn() { return bubbleIdx >= 0; }
+        function hideBubble() { bubbleIdx = -1; const bb = document.getElementById('fix-bubble'); if (bb) bb.style.display = 'none'; }
+        function wordPos(t, at, len) { // 글 속 단어의 화면 위치 (칸 기준)
+            const m = document.createElement('div'), cs = getComputedStyle(t);
+            ['fontFamily','fontSize','fontWeight','lineHeight','letterSpacing','paddingTop','paddingRight','paddingBottom','paddingLeft','borderTopWidth','borderLeftWidth','boxSizing','wordBreak','overflowWrap'].forEach(k => m.style[k] = cs[k]);
+            m.style.position = 'absolute'; m.style.visibility = 'hidden'; m.style.whiteSpace = 'pre-wrap'; m.style.width = t.clientWidth + 'px'; m.style.left = '-9999px'; m.style.top = '0';
+            m.textContent = t.value.slice(0, at); const sp = document.createElement('span'); sp.textContent = t.value.slice(at, at + len) || '.'; m.appendChild(sp);
+            document.body.appendChild(m); const r = { x: sp.offsetLeft, y: sp.offsetTop - t.scrollTop, w: sp.offsetWidth, h: sp.offsetHeight }; m.remove(); return r;
+        }
+        // ---- 뜻이 여러 개인 말: 말풍선에서 뜻을 골라 바꿈 (말한 순서대로 하나씩) ----
+        const SENSE_DB = [ { w: '배', opts: [ { l: '과일', r: '배(과일)' }, { l: '신체', r: '배(신체)' }, { l: '선박', r: '배(선박)' } ] } ];
+        let senseOn = false, senseKey = null, senseAt = -1;
+        function nthIndex(v, w, n) { let i = -1; for (let k = 0; k < n; k++) { i = v.indexOf(w, i + 1); if (i < 0) break; } return i; }
+        function hideSense() { senseOn = false; senseKey = null; senseAt = -1; const el = document.getElementById('sense-bubble'); if (el) el.style.display = 'none'; }
+        function showSense(t, s, at) {
+            const el = document.getElementById('sense-bubble'); if (!el) return;
+            el.innerHTML = s.opts.map((o, j) => `<button type="button" onpointerdown="senseChoose(event,${j})">${escHtml(o.l)}<small>${escHtml(o.r)}</small></button>`).join('');
+            el.style.display = 'flex'; el.style.left = '0px'; el.style.top = '0px';
+            const p = wordPos(t, at, s.w.length), box = t.parentElement, W = el.offsetWidth, H = el.offsetHeight;
+            const wx = t.offsetLeft + p.x + p.w / 2;
+            const left = Math.max(2, Math.min(wx - W / 2, box.clientWidth - W - 2));
+            let top = t.offsetTop + p.y + p.h + 10; if (top + H > box.clientHeight - 4) top = t.offsetTop + p.y - H - 10;
+            el.style.left = left + 'px'; el.style.top = top + 'px';
+        }
+        function senseChoose(e, j) {
+            e.stopPropagation(); e.preventDefault();
+            const s = SENSE_DB.find(x => x.w === senseKey); if (!s) return;
+            const t = document.getElementById('tr-input');
+            const at = t.value.substr(senseAt, s.w.length) === s.w ? senseAt : t.value.indexOf(s.w);
+            if (at >= 0) t.value = t.value.slice(0, at) + s.opts[j].r + t.value.slice(at + s.w.length);
+            hideSense(); keepCount[s.w] = countOf(t.value, s.w);
+            lastVal = t.value; lastChange = Date.now();
+            trKeepText = true; trResumeMic();
+        }
+        setInterval(() => {
+            const t = document.getElementById('tr-input'), bb = document.getElementById('fix-bubble'); if (!t || !bb) return;
+            const v = t.value, now = Date.now();
+            if (!v.trim()) keepCount = {};
+            if (v !== lastVal) { lastVal = v; lastChange = now; if (bubbleOn()) hideBubble(); hideSense(); return; } // 말하는 중에는 숨김
+            if (now - lastChange < 900 || !t.readOnly || document.getElementById('translator-view').style.display !== 'flex') return; // 말이 끝나고 잠깐 멈춘 뒤에만
+            const cand = [];
+            fixesDB.forEach((f, k) => { if (f.w && countOf(v, f.w) > (keepCount[f.w] || 0)) cand.push({ fix: true, k, at: nthIndex(v, f.w, (keepCount[f.w] || 0) + 1) }); });
+            SENSE_DB.forEach((s, k) => { if (countOf(v, s.w) > (keepCount[s.w] || 0)) cand.push({ fix: false, k, at: nthIndex(v, s.w, (keepCount[s.w] || 0) + 1) }); });
+            cand.sort((a, b) => a.at - b.at); // 말한 순서대로
+            const c = cand[0];
+            if (!c) { hideBubble(); hideSense(); return; }
+            if (!c.fix) {
+                const s = SENSE_DB[c.k]; if (senseOn && senseKey === s.w && senseAt === c.at) return;
+                hideBubble(); senseOn = true; senseKey = s.w; senseAt = c.at; showSense(t, s, c.at); return;
+            }
+            hideSense();
+            const i = c.k;
+            if (i === bubbleIdx) return;
+            const f = fixesDB[i], at = v.lastIndexOf(f.w), p = wordPos(t, at, f.w.length), box = t.parentElement;
+            bubbleIdx = i; drawBubble(bb, f.r, t, p, box);
+        }, 200);
+        function drawBubble(bb, text, t, p, box) { // 만화 말풍선: 하얀 타원 + 검은 테두리 + 단어를 가리키는 꼬리
+            bb.innerHTML = `<svg></svg><span>${escHtml(text)}</span>`; bb.style.display = 'block';
+            const sp = bb.querySelector('span'), sw = sp.offsetWidth, sh = sp.offsetHeight;
+            const rx = sw / 2 * 1.22 + 8, ry = Math.max(sh / 2 * 1.3, rx * 0.62), TH = 20, S = 2.5, W = Math.ceil(rx * 2 + S * 2), EH = Math.ceil(ry * 2 + S * 2), H = EH + TH;
+            const ox = t.offsetLeft, oy = t.offsetTop, wx = ox + p.x + p.w / 2; // 단어 가운데
+            let left = wx - W / 2; left = Math.max(2, Math.min(left, box.clientWidth - W - 2));
+            let top = oy + p.y + p.h - 2; const below = top + H <= box.clientHeight - 4; if (!below) top = oy + p.y - H + 2; // 늘 단어 아래에 (칸 맨 아래라 자리가 없을 때만 위에)
+            const cx = W / 2, cy = below ? TH + EH / 2 : EH / 2;
+            let tx = Math.max(cx - rx * 0.75, Math.min(wx - left, cx + rx * 0.75)); // 꼬리 끝
+            const bx = Math.max(cx - rx * 0.55, Math.min(tx - 20, cx + rx * 0.4)), ey = x => ry * Math.sqrt(Math.max(0, 1 - ((x - cx) / rx) ** 2));
+            const x1 = bx - 14, x2 = bx + 12, d = below ? -1 : 1;
+            const y1 = cy + d * (ey(x1) - 4), y2 = cy + d * (ey(x2) - 4), tyy = below ? 1 : H - 1;
+            const tail = `M${x1},${y1} Q${x1 + 6},${tyy - d * 4} ${tx},${tyy} Q${x2 + 2},${y2 + d * 10} ${x2},${y2}`;
+            bb.querySelector('svg').outerHTML = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" style="position:absolute; left:0; top:0; overflow:visible;"><ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="#fff" stroke="#222" stroke-width="${S}"/><path d="${tail}" fill="#fff" stroke="#222" stroke-width="${S}" stroke-linejoin="round"/></svg>`;
+            Object.assign(bb.style, { width: W + 'px', height: H + 'px', left: left + 'px', top: top + 'px' });
+            Object.assign(sp.style, { position: 'absolute', left: (cx - sw / 2) + 'px', top: (cy - sh / 2) + 'px' });
+        }
+        function chipFix(i) {
+            const t = document.getElementById('tr-input'), f = fixesDB[i]; if (!f) return;
+            const at = t.value.lastIndexOf(f.w); hideBubble();
+            stopVoiceInput(); if (at >= 0) t.value = t.value.slice(0, at) + f.r + t.value.slice(at + f.w.length);
+            lastVal = t.value; lastChange = Date.now();
+            trKeepText = true; trResumeMic(); // 바꾼 뒤 글 끝에서 이어서 말함
+        }
+        function bubbleTap(e) { e.stopPropagation(); e.preventDefault(); if (bubbleIdx >= 0) chipFix(bubbleIdx); }
+        // 말풍선이 떠 있을 때 칸을 톡 치면: 말풍선만 사라지고 마이크가 켜짐 (고치기 화면으로 들어가지 않음)
+        let bubbleDismissTap = false;
+        const _trBoxDown = trBoxDown, _trBoxTap = trBoxTap;
+        trBoxDown = function (t) { if (senseOn) { keepCount[senseKey] = countOf(t.value, senseKey); hideSense(); bubbleDismissTap = true; return; } if (bubbleOn()) { const f = fixesDB[bubbleIdx]; keepCount[f.w] = countOf(t.value, f.w); hideBubble(); bubbleDismissTap = true; return; } _trBoxDown(t); };
+        trBoxTap = function (t) { if (bubbleDismissTap) { bubbleDismissTap = false; if (!(recog && !trReverse)) trResumeMic(); return; } _trBoxTap(t); };
+
+    </script>
+
+<!-- 통역 앱 정리: 나라 선택 → 바로 통역 화면, 관광 화면 입구 제거 (인사 기능은 유지) -->
+<script src="도착정보_통역앱용_v1_26-10-20-20시01분_알라딘통역방.js"></script>
+<script>
+  function openTour() {}
+  function showPhraseView(id, name) {
+    if (!findCountry(id)) return;
+    syncCountryFromTr(id);
+    openTranslator();
+  }
+</script>
+<!-- 방: 알라딘통역방 · 통역앱 v1 · 26-10-21-01시20분 -->
+</body>
+</html>
+
+<!-- 파일 끝 · 택시앱 전체소스 · v1 · 26-10-21-01시15분 · 방: 알라딘택시방 -->
