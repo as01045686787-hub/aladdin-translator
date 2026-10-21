@@ -463,14 +463,14 @@
         <div class="menu-item" onclick="toggleMenu(); openWords()">📖 단어장</div>
         <div class="menu-item" onclick="toggleMenu(); openNativePicker()">🌐 모국어 바꾸기</div>
         <div class="menu-item" id="arr-toggle" onclick="toggleArrRow()">✈️ 공항·열차 접기</div>
-        <div style="margin-top:24px; font-size:14px; color:var(--text-dim);">알라딘 통역 v4 · 26-10-21-11시25분</div>
+        <div style="margin-top:24px; font-size:14px; color:var(--text-dim);">알라딘 통역 v6 · 26-10-21-11시50분</div>
         <button onclick="toggleMenu()" style="margin-top:50px; width:100%; padding:18px; background:var(--surface-2); color:var(--text-color); border:1px solid var(--hairline-soft); border-radius:var(--radius-xl); font-size: 16px; font-weight: 700; cursor:pointer;">설정 닫기</button>
     </div>
     <div class="container" id="country-view">
     <div class="arr-row">
         <button class="arr-btn" onclick="AladdinArrivals.open('airport')">✈️ 공항</button>
         <button class="arr-btn" onclick="AladdinArrivals.open('train')">🚆 열차</button>
-        <button class="arr-btn" onclick="showToast('크루즈 도착정보는 준비 중입니다')">🚢 크루즈</button>
+        <button class="arr-btn" onclick="openCruise()">🚢 크루즈</button>
     </div>
         <div id="country-top" style="position:sticky; top:70px; z-index:50; background:var(--bg-color); margin:-16px -16px 0; padding:16px 16px 4px;">
         <div id="last-country-btn" onclick="openLastCountry()" style="display:none; align-items:center; gap:12px; padding:14px 18px; margin-bottom:12px; border-radius:var(--radius-xl); background:var(--major-grad); border:1px solid var(--accent-color); box-shadow:var(--premium-shadow); cursor:pointer; font-size:22px; font-weight:800; color:var(--text-color);"><span id="last-country-flag" style="font-size:32px; line-height:1;"></span><span id="last-country-name" style="flex:1; min-width:0;"></span><span style="color:var(--accent-bright); font-size:20px;">▶</span></div>
@@ -1032,7 +1032,7 @@
         function buildTrLangOptions() {
             // 나라 고르는 목록: 첫 화면과 같은 순서(영어권 국가 → 비영어권 국가), "🇨🇦 캐나다 (Canada)"처럼 한국어(영어)로 보여 줌
             // 고른 뒤 칸에는 승객이 보는 영어 이름(🇨🇦 Canada)만 표시
-            const en = c => `${c.flag} ${enNames[c.id] || c.name}`, ko = c => `${c.flag} ${c.name.replace(/\(.*\)/, '').trim()} (${(enNames[c.id] || c.name).replace(' (', ' · ').replace(')', '')})`; // 괄호 안은 승객이 알아보도록 영어
+            const en = c => `${c.flag} ${enNames[c.id] || c.name}`, ko = c => { const k = c.name.replace(/\(.*\)/, '').trim(), e = (enNames[c.id] || c.name); const w = k.length * 2 + e.length + 3; const code = ({ en_gb:'UK', ja:'JP', zh:'CN', ne:'NP', arg:'AR' })[c.id] || c.id.replace('en_', '').toUpperCase(); if (e === k) return `${c.flag} ${k}`; return `${c.flag} ${k} (${w <= 17 ? e : code})`; }; // 괄호 안은 승객이 알아보도록 영어
             const opt = c => `<option value="${c.id}" data-en="${en(c)}" data-ko="${ko(c)}">${ko(c)}</option>`;
             const gko = c => `<option value="${c.id}">${c.flag} ${c.name}</option>`; // 인사말 화면 나라 바꾸기 목록 (기사님용 한국어 이름)
             document.getElementById('greet-lang').innerHTML = `<optgroup label="영어권 국가">${majorLangs.map(gko).join('')}</optgroup><optgroup label="비영어권 국가">${otherLangs.filter(c => c.id !== 'ko').map(gko).join('')}</optgroup>`;
@@ -1670,7 +1670,11 @@
 <!-- 통역앱 v2 · 26-10-21-11시10분 · 알라딘통역방 : QR 코드(별 자리), 모국어 선택(첫 실행), 모국어에 맞춰 첫 화면 글자 바꾸기 -->
 <style>
   #qr-ov, #nat-ov { position:fixed; inset:0; z-index:200000; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.78); }
-  #qr-ov.on, #nat-ov.on { display:flex; }
+  #qr-ov.on, #nat-ov.on, #cr-ov.on { display:flex; }
+  #cr-ov { position:fixed; inset:0; z-index:200000; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.78); }
+  #cr-card { background:var(--bg-color); border:1px solid var(--accent-color); border-radius:20px; width:min(86vw, 380px); padding:18px; box-sizing:border-box; }
+  #cr-title { text-align:center; font-size:26px; font-weight:800; color:var(--accent-bright); margin-bottom:14px; }
+  .cr-btn { display:block; width:100%; min-height:72px; margin-top:12px; border-radius:16px; border:1px solid var(--hairline); background:var(--surface-2); color:var(--accent-bright); font-family:inherit; font-size:28px; font-weight:800; cursor:pointer; }
   #qr-card { background:#fff; border-radius:20px; padding:18px; text-align:center; width:min(86vw, 380px); box-sizing:border-box; }
   #qr-card img { width:100%; display:block; }
   #qr-card a { display:block; margin-top:12px; font-size:15px; font-weight:700; color:#000; word-break:break-all; text-decoration:underline; }
@@ -1684,8 +1688,14 @@
   .nat-row.sel { color:var(--accent-bright); }
 </style>
 <div id="qr-ov" onclick="closeQR()"><div id="qr-card"><img src="qr_v1_26-10-21-11시10분_알라딘통역방.png" alt="QR"><a id="qr-link" href="https://as01045686787-hub.github.io/aladdin-translator/" onclick="event.stopPropagation()">https://as01045686787-hub.github.io/aladdin-translator/</a></div></div>
+<div id="cr-ov" onclick="closeCruise()"><div id="cr-card" onclick="event.stopPropagation()"><div id="cr-title">🚢 크루즈</div><button class="cr-btn" onclick="cruisePick('영도')">영도</button><button class="cr-btn" onclick="cruisePick('북항')">북항</button></div></div>
 <div id="nat-ov"><div id="nat-card"><div id="nat-title">모국어 선택 · Your language</div><button id="nat-install" onclick="doInstall()">📲 앱 설치 · Install</button><div id="nat-list"></div></div></div>
 <script>
+  /* ---- 크루즈: 영도·북항 고르기 → 아직 준비 중 ---- */
+  function openCruise() { document.getElementById('cr-ov').classList.add('on'); }
+  function closeCruise() { document.getElementById('cr-ov').classList.remove('on'); }
+  function cruisePick(name) { closeCruise(); showToast(name + ' 크루즈 도착정보는 준비 중입니다'); }
+
   /* ---- QR: 작게(별 자리) → 누르면 크게 ---- */
   function openQR() { document.getElementById('qr-ov').classList.add('on'); }
   function closeQR() { document.getElementById('qr-ov').classList.remove('on'); }
@@ -1784,8 +1794,8 @@
   // 시작할 때: 모국어가 없으면(첫 실행) 선택 창, 있으면 그 말로 화면 표시
   window.addEventListener('load', () => { setTimeout(() => { if (!getNative()) openNativePicker(); else applyNative(); }, 0); });
 </script>
-<!-- 방: 알라딘통역방 · 통역앱 v4 · 26-10-21-11시25분 (아이콘: 파란 바탕 노란 램프) -->
+<!-- 방: 알라딘통역방 · 통역앱 v6 · 26-10-21-11시50분 (나라 고르기 목록 한 줄로: 긴 영어 이름은 두 글자 코드) -->
 </body>
 </html>
 
-<!-- 파일 끝 · 알라딘 통역 · v4 · 26-10-21-11시25분 · 방: 알라딘통역방 -->
+<!-- 파일 끝 · 알라딘 통역 · v6 · 26-10-21-11시50분 · 방: 알라딘통역방 -->
